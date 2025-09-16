@@ -5,6 +5,20 @@ Use the **STAR Method** (Situation, Task, Action, Result) to structure your answ
 
 ---
 
+## 🔟 Top 10 Must-Prepare Behavioral Questions
+1. Tell me about a time you showed leadership skills.  
+2. Describe a conflict you had with a colleague and how you resolved it.  
+3. Tell me about a time you faced a challenging problem and how you solved it.  
+4. Give an example of how you managed multiple priorities under pressure.  
+5. Tell me about a time you failed and what you learned from it.  
+6. Describe a situation where you had to work with a difficult stakeholder.  
+7. Give an example of how you persuaded or influenced someone.  
+8. Tell me about a project that did not go as planned and how you adapted.  
+9. Share an example of how you identified an opportunity and took initiative.  
+10. Describe a time you went above and beyond your job responsibilities.  
+
+---
+
 ## Leadership & Ownership
 - Tell me about a time you showed leadership skills.  
 - Describe a situation where you took ownership of a project without being asked.  
@@ -39,3 +53,27 @@ Use the **STAR Method** (Situation, Task, Action, Result) to structure your answ
 - Tell me about a time when you introduced a new idea or process.  
 - Describe a situation where you went above and beyond your job responsibilities.  
 - Share an example of how you identified an opportunity and took initiative.  
+
+---
+
+# STAR Framework Template
+
+Use this template for each question to prepare your scenario in advance.
+
+**Question:** [Insert interview question here]  
+
+**Situation:**  
+[Briefly describe the context, background, or challenge.]  
+
+**Task:**  
+[Explain your responsibility or what was required of you.]  
+
+**Action:**  
+[Describe the specific steps you took. Focus on *your* contributions.]  
+
+**Result:**  
+[Share the outcome. Quantify impact if possible.]  
+
+---
+
+Repeat this process for each question so you build your personal *Scenario Bank*.
