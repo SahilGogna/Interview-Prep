@@ -54,26 +54,5 @@ Use the **STAR Method** (Situation, Task, Action, Result) to structure your answ
 - Describe a situation where you went above and beyond your job responsibilities.  
 - Share an example of how you identified an opportunity and took initiative.  
 
----
 
-# STAR Framework Template
 
-Use this template for each question to prepare your scenario in advance.
-
-**Question:** [Insert interview question here]  
-
-**Situation:**  
-[Briefly describe the context, background, or challenge.]  
-
-**Task:**  
-[Explain your responsibility or what was required of you.]  
-
-**Action:**  
-[Describe the specific steps you took. Focus on *your* contributions.]  
-
-**Result:**  
-[Share the outcome. Quantify impact if possible.]  
-
----
-
-Repeat this process for each question so you build your personal *Scenario Bank*.
