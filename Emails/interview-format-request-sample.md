@@ -1,9 +1,6 @@
 # Sample Email to Recruiter Asking About Interview Format
 
-**Candidate:** Arjun Mehta (Data Engineer)  
-**Recruiter:** Maya Chen  
-**Company:** BlueSky FinTech  
-**Role:** Product Data Analyst
+
 
 ---
 
