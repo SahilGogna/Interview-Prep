@@ -16,5 +16,5 @@ Your manager needs a quick city report. For each **city**, return:
 
 ---
 
-## Q2 — Customers Above Average Total Spend (Moderate)
+## Q2
 Find customers whose **total spend** is **greater than the average total spend across all customers**. 
