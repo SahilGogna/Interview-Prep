@@ -14,7 +14,12 @@ Your manager needs a quick city report. For each **city**, return:
 - **total_revenue** = sum of order amounts from customers in that city  
 - **avg_order_value** = average order amount for that city  
 
+![expected output](../../images/1.png)
+
+
 ---
 
 ## Q2
 Find customers whose **total spend** is **greater than the average total spend across all customers**. 
+
+![expected output](../../images/2.png)
