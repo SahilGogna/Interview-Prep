@@ -48,6 +48,3 @@ Please give me **hints only**, not the full solution.
 - Keep it positive and focused on learning.
 
 ---
-
-That's it!  
-Import data.csv → Ask the questions → Guide with hints → Give feedback.
