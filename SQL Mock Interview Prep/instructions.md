@@ -10,8 +10,8 @@
 ## 2. Running the Interview
 - Each peer gets **30 minutes**.
 - Ask 2-3 questions, mixing difficulty levels:
-  - 🟢 **Easy** → Warm-up (5-10 min)
-  - 🟡 **Medium** → Main challenge (15-20 min)
+  - **Easy** → Warm-up (5-10 min)
+  - **Medium** → Main challenge (15-20 min)
 - Encourage your peer to:
   - Explain their thinking step by step.
   - Ask clarifying questions about the schema.
@@ -46,11 +46,11 @@ Please give me **hints only**, not the full solution.
 
 ## 4. Feedback
 - End each session with:
-  - ✅ One strength they showed.
-  - 🔧 One area to improve.
+  - One strength they showed.
+  - One area to improve.
 - Keep it positive and focused on learning.
 
 ---
 
-✅ That's it!  
+That's it!  
 Run data.sql → Ask the questions → Guide with hints → Give feedback.

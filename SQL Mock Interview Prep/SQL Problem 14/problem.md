@@ -1,12 +1,12 @@
 # SQL Problem 14: Agent Performance Evaluation (Insurance)
 
-**Difficulty:** 🟡 Medium
+**Difficulty:** Medium
 
 ## Context
 
 You are working with an insurance database. Management is evaluating agent performance based on claims handling.
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%2014/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%2014/data.sql)
 
 **Schema:**
 - `insurance.agents` - agent information (`agent_id`, `full_name`)
@@ -26,4 +26,4 @@ For each agent, show:
 
 ## Solution
 
-👉 [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_14.md)
+[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_14.md)

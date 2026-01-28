@@ -1,12 +1,12 @@
 # SQL Problem 5: Find Actual Distance
 
-**Difficulty:** 🟢 Easy
+**Difficulty:** Easy
 
 ## Context
 
 You are working with a car travel tracking system that stores cumulative distances.
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%205/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%205/data.sql)
 
 ---
 
@@ -51,4 +51,4 @@ From the given cars_travel table, find the actual distance travelled by each car
 
 ## Solution
 
-👉 [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_5.md)
+[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_5.md)

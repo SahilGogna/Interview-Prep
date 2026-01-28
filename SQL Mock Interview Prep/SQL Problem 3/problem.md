@@ -1,12 +1,12 @@
 # SQL Problem 3: Delete Duplicate Data
 
-**Difficulty:** 🟢 Easy
+**Difficulty:** Easy
 
 ## Context
 
 You are working with a CARS table that contains duplicate records based on car details.
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%203/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%203/data.sql)
 
 ---
 
@@ -48,4 +48,4 @@ From the given CARS table, delete the records where car details are duplicated.
 
 ## Solution
 
-👉 [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_3.md)
+[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_3.md)

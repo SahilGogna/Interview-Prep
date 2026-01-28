@@ -1,17 +1,17 @@
 # SQL Mock Interview Prep — Instructions
 
-## 📋 Overview
+## Overview
 
 This folder contains **14 SQL practice problems** organized by difficulty level, perfect for peer interview practice or solo study.
 
 | Difficulty | Count | Problems |
 |------------|-------|----------|
-| 🟢 Easy | 9 | 1, 3, 4, 5, 9, 10, 12, 13 |
-| 🟡 Medium | 5 | 2, 6, 7, 8, 11, 14 |
+| Easy | 9 | 1, 3, 4, 5, 9, 10, 12, 13 |
+| Medium | 5 | 2, 6, 7, 8, 11, 14 |
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 SQL Mock Interview Prep/
@@ -29,7 +29,7 @@ SQL Mock Interview Prep/
 
 ---
 
-## 🎯 How to Practice Solo
+## How to Practice Solo
 
 1. Open a problem folder (e.g., `SQL Problem 3/`)
 2. Read `problem.md` for the question and context
@@ -39,7 +39,7 @@ SQL Mock Interview Prep/
 
 ---
 
-## 👥 Peer Interview Format
+## Peer Interview Format
 
 ### Setup (5 min)
 - **Interviewer**: Pick 2-3 problems (mix of Easy & Medium)
@@ -75,9 +75,9 @@ Share these hints with the candidate before showing the full solution.
 
 ---
 
-## 🏷️ Problem Index
+## Problem Index
 
-### Easy (🟢)
+### Easy 
 | # | Title | Topic |
 |---|-------|-------|
 | 1 | City-Level Sales Summary | GROUP BY, JOIN |
@@ -89,7 +89,7 @@ Share these hints with the candidate before showing the full solution.
 | 12 | Customer Lookup by City | WHERE |
 | 13 | Premium Revenue by Policy Type | GROUP BY |
 
-### Medium (🟡)
+### Medium 
 | # | Title | Topic |
 |---|-------|-------|
 | 2 | Customers Above Average Spend | Subquery, HAVING |
@@ -101,7 +101,7 @@ Share these hints with the candidate before showing the full solution.
 
 ---
 
-## 💡 Tips for Success
+## Tips for Success
 
 - **Read carefully**: Understand what output is expected
 - **Start simple**: Get basic query working, then refine
@@ -110,4 +110,4 @@ Share these hints with the candidate before showing the full solution.
 
 ---
 
-✅ **Good luck with your practice!**
+**Good luck with your practice!**

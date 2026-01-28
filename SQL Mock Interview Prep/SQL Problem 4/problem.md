@@ -1,12 +1,12 @@
 # SQL Problem 4: Display Highest and Lowest Salary
 
-**Difficulty:** 🟢 Easy
+**Difficulty:** Easy
 
 ## Context
 
 You are working with an employee table and need to analyze salary data by department.
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%204/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%204/data.sql)
 
 ---
 
@@ -56,4 +56,4 @@ From the given employee table, display the highest and lowest salary correspondi
 
 ## Solution
 
-👉 [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_4.md)
+[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_4.md)

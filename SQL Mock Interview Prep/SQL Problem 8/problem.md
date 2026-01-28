@@ -1,12 +1,12 @@
 # SQL Problem 8: Derive IPL Matches
 
-**Difficulty:** 🟡 Medium
+**Difficulty:** Medium
 
 ## Context
 
 You are working with an IPL teams table and need to generate match schedules.
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%208/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%208/data.sql)
 
 ---
 
@@ -65,4 +65,4 @@ There are 10 IPL teams.
 
 ## Solution
 
-👉 [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_8.md)
+[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_8.md)

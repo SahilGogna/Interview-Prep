@@ -1,12 +1,12 @@
 # SQL Problem 7: Ungroup the Given Input Data
 
-**Difficulty:** 🟡 Medium
+**Difficulty:** Medium
 
 ## Context
 
 You are working with an inventory table that has grouped item counts.
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%207/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%207/data.sql)
 
 ---
 
@@ -47,4 +47,4 @@ Ungroup the given input data. Display the result as per expected output - each i
 
 ## Solution
 
-👉 [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_7.md)
+[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_7.md)

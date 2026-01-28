@@ -1,12 +1,12 @@
 # SQL Problem 6: Input to Output (Remove Reverse Duplicates)
 
-**Difficulty:** 🟡 Medium
+**Difficulty:** Medium
 
 ## Context
 
 You are working with a travel routes table that contains bidirectional route data.
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%206/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%206/data.sql)
 
 ---
 
@@ -46,4 +46,4 @@ Write a SQL query to convert the given input into the expected output - eliminat
 
 ## Solution
 
-👉 [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_6.md)
+[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_6.md)

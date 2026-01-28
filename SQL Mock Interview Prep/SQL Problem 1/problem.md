@@ -1,6 +1,6 @@
 # SQL Problem 1: City-Level Sales Summary
 
-**Difficulty:** 🟢 Easy
+**Difficulty:** Easy
 
 ## Context
 
@@ -9,7 +9,7 @@ You are working as a data analyst for a retail company. You have two tables:
 - **customers** (`customer_id`, `name`, `city`, `signup_date`)
 - **orders** (`order_id`, `customer_id`, `order_date`, `product_category`, `amount`)
 
-📁 **Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%201/data.sql)
+**Dataset**: [data.sql](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Problem%201/data.sql)
 
 ---
 
@@ -31,4 +31,4 @@ Your manager needs a quick city report. For each **city**, return:
 
 ## Solution
 
-� [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_1.md)
+ [View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_1.md)
