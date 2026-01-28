@@ -1,5 +1,7 @@
 # SQL Problem 1: City-Level Sales Summary
 
+**Difficulty:** 🟢 Easy
+
 ## Context
 
 You are working as a data analyst for a retail company. You have two tables:

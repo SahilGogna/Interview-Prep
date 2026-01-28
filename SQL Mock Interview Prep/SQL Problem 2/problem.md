@@ -1,5 +1,7 @@
 # SQL Problem 2: Customers Above Average Total Spend
 
+**Difficulty:** 🟡 Medium
+
 ## Context
 
 You are working as a data analyst for a retail company. You have two tables:
