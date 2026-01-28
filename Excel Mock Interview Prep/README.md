@@ -2,13 +2,15 @@
 
 ## Overview
 
-This folder contains **3 Excel case studies** for peer interview practice or solo study.
+This folder contains **5 Excel case studies** for peer interview practice or solo study.
 
 | Problem | Title | Difficulty | Focus |
 |---------|-------|------------|-------|
 | 1 | Product Sales Analysis | Easy | Trends, Forecasting |
 | 2 | Retail Sales Analysis | Medium | Demographics, Segmentation |
 | 3 | Boat Sales Analysis | Medium | Feature Analysis, Insights |
+| 4 | Call Center Performance | Easy | Agent Metrics, Peak Hours |
+| 5 | Investment Portfolio | Medium | Diversification, Risk |
 
 ---
 
@@ -21,7 +23,7 @@ Excel Mock Interview Prep/
 │   └── data.csv            # Dataset
 ├── Excel Problem 2/
 │   └── ...
-├── Excel Problem 3/
+├── Excel Problem 3-5/
 │   └── ...
 ├── instructions.md         # How to run interviews
 └── README.md               # This file
@@ -82,6 +84,16 @@ Excel Mock Interview Prep/
 - **Scenario**: Analyze boat listings to improve visibility
 - **Key Skills**: Feature analysis, correlation, insights generation
 - **Questions**: 4 tasks
+
+### Problem 4: Call Center Performance (Easy)
+- **Scenario**: Analyze call center data to improve customer service
+- **Key Skills**: Agent performance, peak hour analysis, correlations
+- **Questions**: 6 tasks
+
+### Problem 5: Investment Portfolio (Medium)
+- **Scenario**: Analyze investment transactions for a client
+- **Key Skills**: Portfolio allocation, diversification, risk assessment
+- **Questions**: 7 tasks
 
 ---
 

@@ -1,0 +1,501 @@
+Call_ID,Date,Time,Agent,Call_Type,Wait_Time_Seconds,Call_Duration_Seconds,Resolution,Satisfaction_Score
+CALL-1000,2024-06-12,09:47,Lisa Martinez,Billing Inquiry,30,199,Escalated,3
+CALL-1001,2024-05-31,12:01,Mike Chen,Billing Inquiry,20,179,Resolved,5
+CALL-1002,2024-05-19,12:28,Robert Garcia,Technical Support,47,264,Resolved,5
+CALL-1003,2024-03-12,10:48,David Brown,Billing Inquiry,31,214,Resolved,4
+CALL-1004,2024-01-12,16:34,Mike Chen,General Inquiry,6,151,Escalated,3
+CALL-1005,2024-04-02,15:45,Mike Chen,Billing Inquiry,47,224,Resolved,4
+CALL-1006,2024-01-26,12:29,David Brown,Billing Inquiry,6,243,Escalated,3
+CALL-1007,2024-01-19,15:10,Jennifer White,New Service,55,450,Unresolved,2
+CALL-1008,2024-05-22,10:20,Sarah Johnson,Billing Inquiry,62,189,Resolved,3
+CALL-1009,2024-05-25,17:20,James Wilson,Account Changes,5,337,Resolved,4
+CALL-1010,2024-03-04,16:34,Lisa Martinez,New Service,5,422,Resolved,5
+CALL-1011,2024-02-05,14:05,Sarah Johnson,Complaint,51,343,Escalated,3
+CALL-1012,2024-04-08,12:29,Jennifer White,Technical Support,5,321,Resolved,4
+CALL-1013,2024-05-17,16:49,David Brown,Billing Inquiry,5,203,Unresolved,3
+CALL-1014,2024-03-08,19:48,Emily Davis,Technical Support,46,529,Escalated,3
+CALL-1015,2024-02-20,10:48,Emily Davis,Technical Support,49,267,Resolved,4
+CALL-1016,2024-01-05,09:23,Lisa Martinez,Billing Inquiry,26,249,Resolved,5
+CALL-1017,2024-01-18,19:34,Emily Davis,Billing Inquiry,5,190,Resolved,5
+CALL-1018,2024-04-18,19:59,Jennifer White,New Service,13,201,Resolved,5
+CALL-1019,2024-04-05,13:33,Chris Anderson,Billing Inquiry,27,228,Resolved,4
+CALL-1020,2024-02-26,08:45,Sarah Johnson,Billing Inquiry,57,120,Resolved,4
+CALL-1021,2024-06-20,13:34,Emily Davis,New Service,44,264,Resolved,5
+CALL-1022,2024-04-14,10:06,Amanda Taylor,Technical Support,11,553,Resolved,5
+CALL-1023,2024-06-14,09:25,David Brown,Complaint,35,337,Escalated,2
+CALL-1024,2024-02-16,11:15,Mike Chen,Technical Support,61,298,Resolved,5
+CALL-1025,2024-01-04,19:59,James Wilson,Billing Inquiry,11,183,Resolved,3
+CALL-1026,2024-04-07,08:24,Lisa Martinez,General Inquiry,28,91,Resolved,5
+CALL-1027,2024-05-22,15:31,Emily Davis,Billing Inquiry,46,198,Escalated,2
+CALL-1028,2024-03-21,09:37,Chris Anderson,Technical Support,32,361,Unresolved,1
+CALL-1029,2024-02-17,09:04,James Wilson,Technical Support,49,361,Resolved,3
+CALL-1030,2024-01-21,12:37,Robert Garcia,Technical Support,37,386,Escalated,2
+CALL-1031,2024-04-11,10:41,Lisa Martinez,Technical Support,87,292,Resolved,4
+CALL-1032,2024-05-24,19:04,Jennifer White,Billing Inquiry,20,305,Callback Scheduled,3
+CALL-1033,2024-04-04,11:28,Jennifer White,New Service,5,154,Resolved,3
+CALL-1034,2024-05-21,11:42,Mike Chen,General Inquiry,51,133,Resolved,5
+CALL-1035,2024-03-10,11:13,David Brown,Billing Inquiry,34,148,Resolved,5
+CALL-1036,2024-01-14,09:27,Lisa Martinez,Billing Inquiry,19,204,Unresolved,1
+CALL-1037,2024-04-23,14:27,Jennifer White,Billing Inquiry,81,230,Callback Scheduled,2
+CALL-1038,2024-04-04,15:09,Amanda Taylor,Billing Inquiry,29,287,Escalated,4
+CALL-1039,2024-04-01,10:15,Mike Chen,Technical Support,7,325,Unresolved,2
+CALL-1040,2024-03-01,17:51,Emily Davis,Complaint,57,322,Resolved,5
+CALL-1041,2024-06-20,17:51,James Wilson,Technical Support,27,361,Callback Scheduled,3
+CALL-1042,2024-02-26,10:58,Chris Anderson,Technical Support,62,189,Resolved,5
+CALL-1043,2024-04-12,11:55,Mike Chen,General Inquiry,39,170,Resolved,5
+CALL-1044,2024-05-17,11:01,Mike Chen,Complaint,43,418,Unresolved,1
+CALL-1045,2024-06-01,13:46,David Brown,Technical Support,34,413,Callback Scheduled,1
+CALL-1046,2024-01-12,16:00,Jennifer White,General Inquiry,5,106,Escalated,3
+CALL-1047,2024-04-03,13:42,David Brown,Account Changes,19,208,Callback Scheduled,2
+CALL-1048,2024-06-19,12:25,Lisa Martinez,Account Changes,35,339,Resolved,5
+CALL-1049,2024-02-14,15:19,Amanda Taylor,Technical Support,61,420,Resolved,4
+CALL-1050,2024-06-16,11:28,Chris Anderson,Account Changes,9,231,Unresolved,2
+CALL-1051,2024-06-17,09:32,Robert Garcia,Technical Support,38,228,Resolved,4
+CALL-1052,2024-02-20,10:02,James Wilson,General Inquiry,18,80,Resolved,5
+CALL-1053,2024-05-27,10:44,Amanda Taylor,Technical Support,46,603,Resolved,5
+CALL-1054,2024-01-28,16:14,Emily Davis,Complaint,17,205,Escalated,4
+CALL-1055,2024-02-01,13:51,Chris Anderson,Account Changes,51,232,Unresolved,3
+CALL-1056,2024-06-05,17:57,Jennifer White,Technical Support,43,344,Resolved,5
+CALL-1057,2024-04-25,11:15,Lisa Martinez,New Service,17,339,Resolved,3
+CALL-1058,2024-03-14,11:21,David Brown,Complaint,55,324,Resolved,4
+CALL-1059,2024-02-24,09:26,David Brown,Technical Support,13,463,Resolved,5
+CALL-1060,2024-05-29,18:01,Robert Garcia,Technical Support,43,424,Escalated,4
+CALL-1061,2024-04-17,14:47,Jennifer White,New Service,63,285,Resolved,4
+CALL-1062,2024-04-09,11:43,Amanda Taylor,New Service,69,155,Unresolved,2
+CALL-1063,2024-04-10,15:42,Sarah Johnson,Billing Inquiry,8,227,Resolved,4
+CALL-1064,2024-03-24,10:20,David Brown,New Service,20,484,Escalated,2
+CALL-1065,2024-01-21,13:47,Jennifer White,Billing Inquiry,38,168,Resolved,5
+CALL-1066,2024-01-11,16:15,James Wilson,Complaint,14,254,Escalated,2
+CALL-1067,2024-02-25,13:16,David Brown,Billing Inquiry,5,124,Resolved,5
+CALL-1068,2024-03-20,09:01,Lisa Martinez,Account Changes,41,201,Callback Scheduled,1
+CALL-1069,2024-05-31,16:40,James Wilson,Billing Inquiry,30,75,Resolved,4
+CALL-1070,2024-05-24,16:22,Jennifer White,Technical Support,8,528,Resolved,5
+CALL-1071,2024-05-05,09:23,Chris Anderson,New Service,5,429,Unresolved,1
+CALL-1072,2024-05-17,16:29,Amanda Taylor,Complaint,10,256,Resolved,5
+CALL-1073,2024-03-12,17:15,Chris Anderson,Account Changes,16,183,Resolved,4
+CALL-1074,2024-05-04,10:51,Lisa Martinez,Technical Support,67,286,Resolved,2
+CALL-1075,2024-02-18,09:46,Amanda Taylor,Technical Support,26,227,Resolved,5
+CALL-1076,2024-01-05,09:14,Amanda Taylor,Account Changes,15,329,Resolved,5
+CALL-1077,2024-04-18,19:35,David Brown,Technical Support,8,450,Resolved,5
+CALL-1078,2024-03-21,09:34,Emily Davis,Billing Inquiry,23,136,Resolved,5
+CALL-1079,2024-06-01,11:06,James Wilson,Technical Support,34,501,Escalated,2
+CALL-1080,2024-01-12,19:35,Lisa Martinez,Account Changes,53,343,Resolved,5
+CALL-1081,2024-05-26,11:30,Chris Anderson,Technical Support,59,399,Callback Scheduled,1
+CALL-1082,2024-01-17,12:04,Robert Garcia,Account Changes,35,253,Resolved,4
+CALL-1083,2024-03-04,09:48,Amanda Taylor,Account Changes,28,190,Resolved,5
+CALL-1084,2024-04-23,11:37,Amanda Taylor,Technical Support,25,300,Escalated,4
+CALL-1085,2024-02-23,15:16,Mike Chen,Billing Inquiry,48,198,Resolved,5
+CALL-1086,2024-06-01,13:02,James Wilson,Technical Support,16,664,Resolved,4
+CALL-1087,2024-03-08,16:40,Robert Garcia,Account Changes,44,209,Resolved,5
+CALL-1088,2024-03-09,17:04,Sarah Johnson,Billing Inquiry,13,263,Resolved,4
+CALL-1089,2024-02-01,13:19,Amanda Taylor,General Inquiry,5,119,Resolved,3
+CALL-1090,2024-04-20,16:38,Lisa Martinez,Billing Inquiry,28,260,Callback Scheduled,2
+CALL-1091,2024-01-06,19:43,Lisa Martinez,Account Changes,26,195,Resolved,5
+CALL-1092,2024-03-12,10:37,Amanda Taylor,Account Changes,36,241,Resolved,4
+CALL-1093,2024-06-20,09:10,David Brown,Technical Support,5,425,Resolved,5
+CALL-1094,2024-01-10,13:20,Lisa Martinez,Technical Support,44,396,Resolved,5
+CALL-1095,2024-06-17,17:29,Amanda Taylor,Billing Inquiry,5,171,Resolved,5
+CALL-1096,2024-01-14,10:35,Emily Davis,General Inquiry,16,141,Resolved,5
+CALL-1097,2024-06-04,16:45,Emily Davis,Technical Support,45,431,Resolved,5
+CALL-1098,2024-01-30,13:07,Emily Davis,Technical Support,20,273,Resolved,5
+CALL-1099,2024-04-30,11:35,Emily Davis,Technical Support,66,349,Callback Scheduled,3
+CALL-1100,2024-03-11,16:54,Amanda Taylor,Technical Support,28,323,Resolved,5
+CALL-1101,2024-05-30,15:42,Chris Anderson,Complaint,23,334,Resolved,5
+CALL-1102,2024-04-06,13:20,James Wilson,General Inquiry,26,155,Callback Scheduled,2
+CALL-1103,2024-03-22,16:45,Amanda Taylor,Technical Support,5,219,Unresolved,2
+CALL-1104,2024-01-10,09:37,David Brown,Complaint,40,231,Escalated,3
+CALL-1105,2024-02-06,12:41,Emily Davis,Billing Inquiry,28,138,Resolved,4
+CALL-1106,2024-01-21,17:54,Jennifer White,Technical Support,12,603,Escalated,4
+CALL-1107,2024-01-10,15:15,Lisa Martinez,General Inquiry,44,81,Resolved,5
+CALL-1108,2024-01-26,13:44,Lisa Martinez,Complaint,59,345,Resolved,4
+CALL-1109,2024-02-07,11:26,Robert Garcia,Account Changes,50,280,Resolved,4
+CALL-1110,2024-06-23,11:58,Robert Garcia,Billing Inquiry,30,189,Resolved,3
+CALL-1111,2024-04-29,18:43,Jennifer White,Billing Inquiry,7,197,Resolved,5
+CALL-1112,2024-04-18,16:29,Lisa Martinez,Billing Inquiry,7,221,Resolved,5
+CALL-1113,2024-05-27,11:44,Lisa Martinez,Billing Inquiry,54,132,Resolved,5
+CALL-1114,2024-01-13,18:47,Chris Anderson,Complaint,53,210,Resolved,5
+CALL-1115,2024-02-26,15:39,Lisa Martinez,Account Changes,39,136,Escalated,3
+CALL-1116,2024-06-09,15:19,Chris Anderson,Billing Inquiry,37,201,Callback Scheduled,1
+CALL-1117,2024-04-16,10:08,Jennifer White,Complaint,29,379,Resolved,4
+CALL-1118,2024-05-03,19:18,David Brown,Complaint,17,307,Callback Scheduled,1
+CALL-1119,2024-06-22,16:25,Jennifer White,Technical Support,25,399,Resolved,5
+CALL-1120,2024-06-21,16:16,Robert Garcia,Technical Support,12,327,Resolved,5
+CALL-1121,2024-06-07,17:35,David Brown,Complaint,26,332,Callback Scheduled,3
+CALL-1122,2024-03-18,15:07,Emily Davis,Billing Inquiry,109,221,Resolved,3
+CALL-1123,2024-05-17,10:29,David Brown,Account Changes,42,66,Resolved,5
+CALL-1124,2024-02-09,17:41,Mike Chen,Complaint,5,158,Resolved,5
+CALL-1125,2024-02-25,13:15,David Brown,Billing Inquiry,15,117,Unresolved,1
+CALL-1126,2024-04-11,11:07,Chris Anderson,Billing Inquiry,51,254,Unresolved,1
+CALL-1127,2024-03-26,11:08,Robert Garcia,Billing Inquiry,57,119,Resolved,5
+CALL-1128,2024-02-29,11:09,Robert Garcia,Billing Inquiry,52,156,Resolved,4
+CALL-1129,2024-02-14,09:55,Sarah Johnson,Billing Inquiry,5,253,Resolved,3
+CALL-1130,2024-03-08,09:47,Amanda Taylor,Technical Support,24,276,Escalated,3
+CALL-1131,2024-01-28,13:14,Robert Garcia,Billing Inquiry,33,73,Resolved,5
+CALL-1132,2024-01-08,09:30,Amanda Taylor,Technical Support,49,544,Resolved,5
+CALL-1133,2024-03-23,15:04,Emily Davis,Technical Support,28,302,Resolved,5
+CALL-1134,2024-05-15,11:32,Robert Garcia,Technical Support,47,360,Resolved,5
+CALL-1135,2024-05-21,16:13,Amanda Taylor,Technical Support,27,533,Resolved,5
+CALL-1136,2024-01-25,11:20,Lisa Martinez,Technical Support,71,653,Resolved,5
+CALL-1137,2024-01-24,13:47,David Brown,Complaint,5,258,Escalated,3
+CALL-1138,2024-02-01,12:55,Amanda Taylor,Complaint,15,67,Escalated,3
+CALL-1139,2024-05-27,14:09,Chris Anderson,Billing Inquiry,75,245,Resolved,5
+CALL-1140,2024-05-26,10:27,Jennifer White,General Inquiry,56,74,Resolved,3
+CALL-1141,2024-06-17,17:17,Sarah Johnson,Billing Inquiry,19,135,Resolved,3
+CALL-1142,2024-02-06,14:25,Mike Chen,Billing Inquiry,41,169,Escalated,2
+CALL-1143,2024-04-17,13:10,David Brown,Technical Support,5,687,Resolved,5
+CALL-1144,2024-02-09,10:39,Sarah Johnson,Account Changes,40,345,Resolved,5
+CALL-1145,2024-03-10,10:32,Mike Chen,Technical Support,68,541,Resolved,4
+CALL-1146,2024-03-19,09:25,Robert Garcia,Billing Inquiry,38,304,Escalated,3
+CALL-1147,2024-03-15,11:00,Chris Anderson,New Service,53,454,Escalated,3
+CALL-1148,2024-06-20,17:04,Amanda Taylor,Complaint,28,304,Unresolved,3
+CALL-1149,2024-05-27,13:25,Amanda Taylor,Technical Support,5,604,Resolved,5
+CALL-1150,2024-04-27,17:58,David Brown,Billing Inquiry,33,146,Resolved,5
+CALL-1151,2024-04-11,17:47,David Brown,Billing Inquiry,26,158,Resolved,5
+CALL-1152,2024-02-19,18:22,David Brown,New Service,40,179,Resolved,4
+CALL-1153,2024-02-20,10:09,Mike Chen,Billing Inquiry,48,117,Escalated,3
+CALL-1154,2024-04-24,16:56,Robert Garcia,Account Changes,42,234,Unresolved,1
+CALL-1155,2024-04-22,09:28,Lisa Martinez,New Service,9,305,Resolved,5
+CALL-1156,2024-01-10,09:53,Lisa Martinez,Billing Inquiry,50,100,Resolved,5
+CALL-1157,2024-04-28,15:50,Sarah Johnson,Technical Support,55,249,Resolved,5
+CALL-1158,2024-02-08,19:28,Mike Chen,Complaint,54,81,Resolved,5
+CALL-1159,2024-01-11,11:28,Chris Anderson,Technical Support,30,343,Callback Scheduled,1
+CALL-1160,2024-03-27,16:03,David Brown,Billing Inquiry,49,225,Resolved,5
+CALL-1161,2024-06-17,19:38,Emily Davis,Technical Support,15,385,Resolved,5
+CALL-1162,2024-06-27,15:08,Robert Garcia,New Service,67,430,Resolved,4
+CALL-1163,2024-02-02,15:53,Jennifer White,Billing Inquiry,33,123,Resolved,4
+CALL-1164,2024-02-24,11:49,Chris Anderson,Billing Inquiry,56,179,Resolved,5
+CALL-1165,2024-05-09,16:53,Jennifer White,Billing Inquiry,7,258,Resolved,4
+CALL-1166,2024-02-11,10:44,Robert Garcia,Complaint,55,383,Escalated,3
+CALL-1167,2024-03-01,19:39,Lisa Martinez,New Service,28,282,Resolved,5
+CALL-1168,2024-04-30,18:12,David Brown,Account Changes,5,206,Escalated,3
+CALL-1169,2024-05-08,14:10,James Wilson,Complaint,54,352,Escalated,4
+CALL-1170,2024-05-21,18:45,Jennifer White,Complaint,17,449,Resolved,5
+CALL-1171,2024-02-07,17:05,James Wilson,Complaint,59,162,Escalated,3
+CALL-1172,2024-04-05,11:05,David Brown,Billing Inquiry,41,202,Escalated,3
+CALL-1173,2024-02-07,10:18,Chris Anderson,Account Changes,65,326,Resolved,2
+CALL-1174,2024-01-21,08:13,Emily Davis,Technical Support,21,267,Resolved,4
+CALL-1175,2024-03-18,09:15,Amanda Taylor,Account Changes,19,221,Escalated,3
+CALL-1176,2024-05-17,08:32,Robert Garcia,Billing Inquiry,38,224,Resolved,4
+CALL-1177,2024-04-16,10:42,Mike Chen,Technical Support,13,659,Resolved,5
+CALL-1178,2024-05-09,14:24,Chris Anderson,Billing Inquiry,30,214,Escalated,3
+CALL-1179,2024-01-18,11:46,Mike Chen,New Service,43,263,Resolved,5
+CALL-1180,2024-06-13,10:49,Chris Anderson,General Inquiry,32,123,Resolved,5
+CALL-1181,2024-04-27,08:12,Sarah Johnson,New Service,38,298,Resolved,4
+CALL-1182,2024-05-19,13:02,James Wilson,Technical Support,29,389,Resolved,4
+CALL-1183,2024-04-04,13:25,Chris Anderson,Complaint,5,458,Escalated,3
+CALL-1184,2024-05-12,11:05,Amanda Taylor,Billing Inquiry,15,119,Resolved,4
+CALL-1185,2024-01-21,11:18,Lisa Martinez,Technical Support,42,345,Resolved,5
+CALL-1186,2024-03-31,15:27,Lisa Martinez,Account Changes,46,216,Resolved,5
+CALL-1187,2024-05-11,16:43,Emily Davis,General Inquiry,42,158,Escalated,2
+CALL-1188,2024-01-18,11:41,David Brown,Technical Support,49,409,Resolved,5
+CALL-1189,2024-04-04,12:48,Mike Chen,Account Changes,5,226,Resolved,4
+CALL-1190,2024-01-30,08:11,Chris Anderson,Technical Support,33,387,Escalated,3
+CALL-1191,2024-02-24,19:18,Chris Anderson,Billing Inquiry,30,195,Resolved,5
+CALL-1192,2024-01-23,17:54,David Brown,Account Changes,18,151,Resolved,4
+CALL-1193,2024-02-10,16:59,Emily Davis,New Service,14,356,Resolved,4
+CALL-1194,2024-05-06,08:35,Robert Garcia,Technical Support,33,269,Resolved,3
+CALL-1195,2024-03-20,12:45,Chris Anderson,Technical Support,29,187,Resolved,5
+CALL-1196,2024-06-13,09:29,Jennifer White,Technical Support,50,267,Resolved,4
+CALL-1197,2024-02-03,13:58,Sarah Johnson,Complaint,8,291,Resolved,5
+CALL-1198,2024-02-27,11:33,Lisa Martinez,Complaint,44,427,Escalated,2
+CALL-1199,2024-03-18,15:05,Jennifer White,Account Changes,22,188,Resolved,5
+CALL-1200,2024-06-03,11:59,Robert Garcia,Billing Inquiry,50,163,Callback Scheduled,2
+CALL-1201,2024-03-08,15:49,Robert Garcia,Technical Support,29,306,Resolved,4
+CALL-1202,2024-03-18,13:51,Amanda Taylor,Technical Support,31,439,Resolved,5
+CALL-1203,2024-02-22,11:09,David Brown,Complaint,19,542,Resolved,4
+CALL-1204,2024-04-04,14:06,David Brown,Billing Inquiry,60,221,Resolved,3
+CALL-1205,2024-04-08,17:26,James Wilson,General Inquiry,54,82,Callback Scheduled,2
+CALL-1206,2024-02-18,16:31,Jennifer White,Technical Support,42,318,Resolved,4
+CALL-1207,2024-04-27,19:13,Robert Garcia,Technical Support,47,465,Callback Scheduled,2
+CALL-1208,2024-04-30,11:00,Mike Chen,Technical Support,68,283,Escalated,3
+CALL-1209,2024-04-12,09:35,James Wilson,Technical Support,20,540,Resolved,5
+CALL-1210,2024-06-08,16:07,Emily Davis,General Inquiry,5,159,Resolved,5
+CALL-1211,2024-02-06,10:32,Amanda Taylor,Technical Support,55,439,Resolved,5
+CALL-1212,2024-04-26,10:57,Jennifer White,Billing Inquiry,60,160,Resolved,4
+CALL-1213,2024-03-17,15:32,Jennifer White,Technical Support,40,317,Escalated,3
+CALL-1214,2024-06-21,09:26,Robert Garcia,Technical Support,57,268,Resolved,5
+CALL-1215,2024-03-08,19:50,Robert Garcia,Account Changes,20,146,Resolved,5
+CALL-1216,2024-06-07,16:24,Emily Davis,Complaint,26,417,Callback Scheduled,1
+CALL-1217,2024-04-22,11:09,Amanda Taylor,Account Changes,15,306,Callback Scheduled,3
+CALL-1218,2024-01-16,16:33,James Wilson,Account Changes,47,239,Resolved,5
+CALL-1219,2024-04-27,18:21,Jennifer White,Technical Support,29,220,Resolved,5
+CALL-1220,2024-06-05,13:15,Lisa Martinez,Account Changes,33,431,Resolved,4
+CALL-1221,2024-02-23,16:31,David Brown,Technical Support,5,310,Escalated,2
+CALL-1222,2024-05-26,16:24,Amanda Taylor,Complaint,59,254,Resolved,4
+CALL-1223,2024-01-21,11:28,Lisa Martinez,New Service,53,557,Resolved,5
+CALL-1224,2024-03-10,10:39,Robert Garcia,Billing Inquiry,86,216,Resolved,3
+CALL-1225,2024-01-26,12:45,Chris Anderson,Billing Inquiry,25,174,Resolved,5
+CALL-1226,2024-04-14,15:56,Chris Anderson,Technical Support,61,728,Resolved,4
+CALL-1227,2024-01-23,15:14,Jennifer White,New Service,48,335,Callback Scheduled,2
+CALL-1228,2024-02-15,18:02,Amanda Taylor,New Service,37,525,Callback Scheduled,1
+CALL-1229,2024-01-10,08:36,Robert Garcia,Billing Inquiry,41,175,Unresolved,2
+CALL-1230,2024-05-06,18:08,Jennifer White,Technical Support,28,477,Resolved,5
+CALL-1231,2024-03-06,16:00,David Brown,New Service,5,284,Resolved,5
+CALL-1232,2024-04-13,17:32,David Brown,Billing Inquiry,18,149,Resolved,4
+CALL-1233,2024-03-04,08:24,James Wilson,Technical Support,23,532,Resolved,5
+CALL-1234,2024-03-07,15:44,James Wilson,Billing Inquiry,57,211,Resolved,5
+CALL-1235,2024-06-29,16:44,Mike Chen,Account Changes,42,214,Resolved,5
+CALL-1236,2024-05-02,10:47,Robert Garcia,Technical Support,31,154,Escalated,4
+CALL-1237,2024-02-25,16:43,Robert Garcia,Complaint,43,348,Callback Scheduled,1
+CALL-1238,2024-05-24,09:53,Jennifer White,Complaint,32,406,Resolved,5
+CALL-1239,2024-04-23,09:13,Robert Garcia,Technical Support,42,338,Resolved,4
+CALL-1240,2024-04-16,13:03,Jennifer White,Technical Support,36,230,Resolved,5
+CALL-1241,2024-02-25,15:02,Amanda Taylor,Technical Support,104,577,Callback Scheduled,1
+CALL-1242,2024-04-30,08:26,Emily Davis,New Service,30,62,Resolved,5
+CALL-1243,2024-04-07,13:58,Amanda Taylor,Technical Support,12,250,Resolved,5
+CALL-1244,2024-03-30,09:34,Amanda Taylor,Technical Support,23,331,Resolved,3
+CALL-1245,2024-03-17,13:46,Jennifer White,Technical Support,14,482,Resolved,4
+CALL-1246,2024-02-18,18:46,Mike Chen,Billing Inquiry,10,116,Callback Scheduled,3
+CALL-1247,2024-03-02,10:06,Robert Garcia,Billing Inquiry,19,131,Resolved,5
+CALL-1248,2024-04-12,13:34,James Wilson,New Service,26,301,Unresolved,1
+CALL-1249,2024-05-27,11:38,David Brown,Billing Inquiry,86,69,Resolved,4
+CALL-1250,2024-03-11,09:37,Emily Davis,Account Changes,5,277,Unresolved,3
+CALL-1251,2024-06-20,12:33,David Brown,Account Changes,10,273,Resolved,5
+CALL-1252,2024-03-02,17:19,Emily Davis,Complaint,47,240,Unresolved,2
+CALL-1253,2024-02-04,12:16,James Wilson,Technical Support,44,485,Resolved,5
+CALL-1254,2024-02-18,09:24,Robert Garcia,Account Changes,34,206,Escalated,3
+CALL-1255,2024-05-23,10:13,David Brown,Technical Support,56,372,Resolved,5
+CALL-1256,2024-05-02,18:44,Robert Garcia,New Service,13,408,Resolved,4
+CALL-1257,2024-04-29,14:22,Lisa Martinez,Technical Support,21,408,Resolved,5
+CALL-1258,2024-04-30,16:20,James Wilson,Technical Support,5,503,Resolved,4
+CALL-1259,2024-03-07,14:37,Robert Garcia,New Service,41,428,Resolved,5
+CALL-1260,2024-03-03,14:41,David Brown,Technical Support,67,124,Resolved,4
+CALL-1261,2024-02-13,16:22,Emily Davis,Billing Inquiry,12,170,Callback Scheduled,3
+CALL-1262,2024-01-16,14:53,Mike Chen,General Inquiry,28,66,Resolved,5
+CALL-1263,2024-02-29,09:09,Sarah Johnson,Billing Inquiry,18,185,Resolved,5
+CALL-1264,2024-05-03,15:01,Sarah Johnson,Technical Support,41,432,Escalated,3
+CALL-1265,2024-03-14,08:52,Amanda Taylor,Complaint,33,277,Resolved,4
+CALL-1266,2024-02-19,15:16,David Brown,Technical Support,29,493,Resolved,5
+CALL-1267,2024-06-27,10:43,Mike Chen,Account Changes,66,145,Resolved,4
+CALL-1268,2024-05-21,13:40,Sarah Johnson,New Service,58,463,Resolved,4
+CALL-1269,2024-01-25,18:58,Sarah Johnson,Billing Inquiry,49,131,Resolved,4
+CALL-1270,2024-01-20,16:17,Jennifer White,Account Changes,69,273,Resolved,5
+CALL-1271,2024-05-30,10:52,Amanda Taylor,General Inquiry,37,164,Resolved,5
+CALL-1272,2024-06-22,18:21,Amanda Taylor,New Service,63,608,Escalated,3
+CALL-1273,2024-03-29,09:27,James Wilson,Complaint,6,429,Unresolved,1
+CALL-1274,2024-03-24,08:17,Chris Anderson,Technical Support,5,656,Resolved,5
+CALL-1275,2024-06-18,12:49,Robert Garcia,Technical Support,25,469,Resolved,4
+CALL-1276,2024-06-11,10:24,David Brown,Technical Support,85,584,Resolved,5
+CALL-1277,2024-01-27,10:11,Amanda Taylor,Technical Support,25,376,Resolved,4
+CALL-1278,2024-01-24,15:50,David Brown,Complaint,65,307,Callback Scheduled,2
+CALL-1279,2024-05-23,18:15,Robert Garcia,Technical Support,20,349,Resolved,4
+CALL-1280,2024-02-07,09:27,Lisa Martinez,Technical Support,17,424,Resolved,4
+CALL-1281,2024-06-09,14:39,James Wilson,Technical Support,46,431,Resolved,5
+CALL-1282,2024-04-07,17:21,Chris Anderson,Technical Support,40,191,Unresolved,1
+CALL-1283,2024-03-23,15:44,James Wilson,Technical Support,53,534,Resolved,5
+CALL-1284,2024-06-11,14:36,James Wilson,Technical Support,38,637,Resolved,5
+CALL-1285,2024-02-21,15:34,Emily Davis,Account Changes,5,184,Resolved,5
+CALL-1286,2024-04-22,16:53,Mike Chen,Complaint,30,211,Escalated,3
+CALL-1287,2024-03-02,11:09,Amanda Taylor,New Service,99,508,Resolved,4
+CALL-1288,2024-05-09,18:55,Amanda Taylor,Technical Support,29,304,Callback Scheduled,2
+CALL-1289,2024-06-12,18:06,James Wilson,Account Changes,7,322,Resolved,5
+CALL-1290,2024-06-22,15:48,David Brown,General Inquiry,42,122,Resolved,5
+CALL-1291,2024-05-12,14:44,Robert Garcia,Billing Inquiry,29,222,Resolved,5
+CALL-1292,2024-02-08,11:01,Chris Anderson,Billing Inquiry,5,249,Resolved,5
+CALL-1293,2024-02-06,11:21,Chris Anderson,New Service,26,346,Resolved,5
+CALL-1294,2024-04-25,11:19,Sarah Johnson,Complaint,74,415,Escalated,3
+CALL-1295,2024-02-12,18:47,James Wilson,Technical Support,8,383,Resolved,5
+CALL-1296,2024-04-13,15:11,Amanda Taylor,Technical Support,41,159,Resolved,5
+CALL-1297,2024-01-02,16:13,Lisa Martinez,New Service,27,323,Resolved,5
+CALL-1298,2024-02-17,12:12,Chris Anderson,Billing Inquiry,13,124,Unresolved,1
+CALL-1299,2024-04-09,15:37,Mike Chen,Technical Support,60,275,Escalated,3
+CALL-1300,2024-03-17,18:37,Mike Chen,Account Changes,19,289,Resolved,4
+CALL-1301,2024-02-06,14:26,Robert Garcia,Billing Inquiry,35,203,Resolved,5
+CALL-1302,2024-06-14,18:11,Jennifer White,Billing Inquiry,21,213,Escalated,3
+CALL-1303,2024-04-01,18:31,Emily Davis,Billing Inquiry,5,226,Resolved,5
+CALL-1304,2024-05-05,12:53,Chris Anderson,Technical Support,29,435,Escalated,2
+CALL-1305,2024-03-11,10:18,Emily Davis,New Service,13,285,Resolved,5
+CALL-1306,2024-05-26,09:49,Jennifer White,Complaint,5,424,Resolved,5
+CALL-1307,2024-05-19,10:27,Mike Chen,New Service,36,293,Callback Scheduled,1
+CALL-1308,2024-03-08,11:52,Mike Chen,Technical Support,79,411,Resolved,5
+CALL-1309,2024-05-30,16:55,Robert Garcia,Account Changes,30,274,Resolved,4
+CALL-1310,2024-01-16,14:34,Lisa Martinez,Account Changes,72,414,Resolved,4
+CALL-1311,2024-05-11,19:43,Mike Chen,Billing Inquiry,25,124,Resolved,4
+CALL-1312,2024-06-16,09:55,Emily Davis,Billing Inquiry,15,81,Escalated,3
+CALL-1313,2024-05-05,10:40,Lisa Martinez,Account Changes,39,260,Escalated,3
+CALL-1314,2024-04-13,14:17,David Brown,Technical Support,18,432,Callback Scheduled,3
+CALL-1315,2024-01-24,16:29,David Brown,Complaint,30,213,Unresolved,3
+CALL-1316,2024-05-06,11:53,Lisa Martinez,Technical Support,22,343,Resolved,4
+CALL-1317,2024-06-23,16:02,Mike Chen,Account Changes,26,228,Callback Scheduled,1
+CALL-1318,2024-04-26,08:27,James Wilson,General Inquiry,59,79,Resolved,5
+CALL-1319,2024-03-11,09:23,Lisa Martinez,Billing Inquiry,10,112,Resolved,5
+CALL-1320,2024-06-28,16:27,Mike Chen,New Service,47,360,Resolved,4
+CALL-1321,2024-06-23,13:00,David Brown,Complaint,45,292,Resolved,3
+CALL-1322,2024-04-08,09:51,Mike Chen,Billing Inquiry,13,213,Resolved,5
+CALL-1323,2024-02-04,15:43,Emily Davis,Billing Inquiry,19,151,Resolved,4
+CALL-1324,2024-02-24,15:09,Amanda Taylor,Account Changes,31,257,Callback Scheduled,1
+CALL-1325,2024-02-01,15:24,David Brown,General Inquiry,40,138,Resolved,3
+CALL-1326,2024-05-21,15:46,Robert Garcia,Technical Support,49,409,Escalated,4
+CALL-1327,2024-02-22,14:32,James Wilson,New Service,43,394,Callback Scheduled,3
+CALL-1328,2024-05-06,12:15,Chris Anderson,Account Changes,62,305,Resolved,4
+CALL-1329,2024-03-22,10:55,Robert Garcia,Technical Support,33,397,Resolved,5
+CALL-1330,2024-01-19,08:04,Sarah Johnson,Technical Support,31,431,Escalated,3
+CALL-1331,2024-06-09,16:49,Amanda Taylor,Technical Support,5,523,Resolved,4
+CALL-1332,2024-01-22,11:32,James Wilson,General Inquiry,54,146,Resolved,5
+CALL-1333,2024-06-15,16:04,Lisa Martinez,Account Changes,20,101,Resolved,3
+CALL-1334,2024-04-21,09:39,Robert Garcia,Billing Inquiry,10,111,Resolved,3
+CALL-1335,2024-02-05,16:10,Chris Anderson,General Inquiry,5,110,Escalated,2
+CALL-1336,2024-02-02,16:55,Lisa Martinez,New Service,56,516,Resolved,5
+CALL-1337,2024-05-14,09:45,Robert Garcia,Account Changes,5,242,Resolved,5
+CALL-1338,2024-02-12,12:16,Mike Chen,Complaint,20,260,Callback Scheduled,1
+CALL-1339,2024-01-04,11:30,David Brown,Technical Support,72,655,Callback Scheduled,2
+CALL-1340,2024-06-16,12:20,James Wilson,Technical Support,22,321,Resolved,4
+CALL-1341,2024-05-08,15:03,Emily Davis,Billing Inquiry,38,178,Resolved,5
+CALL-1342,2024-03-13,16:19,David Brown,Billing Inquiry,6,193,Resolved,5
+CALL-1343,2024-06-08,11:23,Robert Garcia,General Inquiry,79,119,Escalated,3
+CALL-1344,2024-03-03,10:59,Amanda Taylor,Billing Inquiry,17,160,Resolved,3
+CALL-1345,2024-03-26,08:42,Amanda Taylor,Complaint,23,258,Escalated,2
+CALL-1346,2024-05-05,19:09,Lisa Martinez,Billing Inquiry,62,125,Resolved,5
+CALL-1347,2024-04-05,13:47,Mike Chen,Account Changes,5,236,Resolved,5
+CALL-1348,2024-01-16,13:08,James Wilson,Technical Support,52,188,Resolved,5
+CALL-1349,2024-03-24,11:17,James Wilson,Billing Inquiry,55,269,Resolved,4
+CALL-1350,2024-02-12,13:20,Amanda Taylor,Billing Inquiry,5,252,Resolved,5
+CALL-1351,2024-01-31,09:51,Lisa Martinez,Complaint,23,275,Callback Scheduled,1
+CALL-1352,2024-01-24,16:22,Amanda Taylor,Technical Support,18,332,Unresolved,1
+CALL-1353,2024-04-13,17:35,Jennifer White,Billing Inquiry,5,203,Resolved,3
+CALL-1354,2024-02-26,10:52,Amanda Taylor,Technical Support,25,287,Resolved,4
+CALL-1355,2024-01-20,08:04,James Wilson,Complaint,15,316,Unresolved,3
+CALL-1356,2024-03-25,09:29,Sarah Johnson,Billing Inquiry,5,135,Resolved,3
+CALL-1357,2024-06-23,12:22,James Wilson,Complaint,21,396,Resolved,5
+CALL-1358,2024-06-06,11:18,Chris Anderson,Technical Support,38,406,Resolved,4
+CALL-1359,2024-02-21,15:51,Jennifer White,Billing Inquiry,70,177,Resolved,4
+CALL-1360,2024-04-01,13:50,Chris Anderson,Technical Support,8,375,Resolved,3
+CALL-1361,2024-06-01,10:57,Lisa Martinez,Billing Inquiry,69,176,Escalated,4
+CALL-1362,2024-02-10,09:42,James Wilson,Technical Support,43,162,Resolved,5
+CALL-1363,2024-02-26,15:51,Amanda Taylor,Technical Support,65,213,Resolved,4
+CALL-1364,2024-06-27,11:37,Sarah Johnson,New Service,29,472,Resolved,5
+CALL-1365,2024-05-06,14:11,Chris Anderson,Billing Inquiry,70,205,Resolved,4
+CALL-1366,2024-03-25,18:12,Emily Davis,Technical Support,40,623,Callback Scheduled,1
+CALL-1367,2024-02-07,15:58,Emily Davis,New Service,67,183,Unresolved,1
+CALL-1368,2024-06-18,12:06,David Brown,Technical Support,32,475,Callback Scheduled,2
+CALL-1369,2024-05-04,15:11,Jennifer White,Account Changes,76,185,Resolved,4
+CALL-1370,2024-02-14,12:46,Lisa Martinez,Billing Inquiry,18,49,Callback Scheduled,1
+CALL-1371,2024-05-25,08:38,David Brown,General Inquiry,38,114,Resolved,5
+CALL-1372,2024-02-06,11:04,James Wilson,Technical Support,32,582,Unresolved,3
+CALL-1373,2024-06-20,15:56,David Brown,Technical Support,43,515,Resolved,4
+CALL-1374,2024-01-28,16:03,Amanda Taylor,Technical Support,14,456,Resolved,5
+CALL-1375,2024-03-30,14:06,Chris Anderson,New Service,15,274,Resolved,5
+CALL-1376,2024-01-09,11:20,Lisa Martinez,General Inquiry,55,129,Resolved,5
+CALL-1377,2024-05-20,18:05,David Brown,Account Changes,7,185,Resolved,5
+CALL-1378,2024-02-12,15:27,Emily Davis,Billing Inquiry,18,307,Resolved,5
+CALL-1379,2024-05-18,11:18,Lisa Martinez,Billing Inquiry,69,201,Escalated,2
+CALL-1380,2024-04-02,08:05,Lisa Martinez,Complaint,8,227,Resolved,4
+CALL-1381,2024-06-12,11:05,Chris Anderson,Complaint,37,384,Escalated,3
+CALL-1382,2024-01-24,15:24,Emily Davis,Technical Support,35,474,Resolved,5
+CALL-1383,2024-03-08,10:17,Robert Garcia,Billing Inquiry,45,99,Resolved,4
+CALL-1384,2024-05-18,12:48,Robert Garcia,Billing Inquiry,43,199,Resolved,5
+CALL-1385,2024-06-24,17:30,Robert Garcia,Complaint,16,305,Unresolved,2
+CALL-1386,2024-05-08,14:33,Robert Garcia,Account Changes,37,215,Escalated,2
+CALL-1387,2024-02-12,19:51,James Wilson,Billing Inquiry,5,254,Resolved,5
+CALL-1388,2024-06-09,10:38,Lisa Martinez,Technical Support,39,193,Resolved,5
+CALL-1389,2024-05-21,11:17,Jennifer White,Technical Support,69,261,Resolved,4
+CALL-1390,2024-04-17,09:09,Emily Davis,Account Changes,5,147,Resolved,4
+CALL-1391,2024-01-26,16:55,Jennifer White,Complaint,36,251,Escalated,3
+CALL-1392,2024-05-01,08:17,Amanda Taylor,Billing Inquiry,5,127,Resolved,5
+CALL-1393,2024-03-25,16:03,Chris Anderson,General Inquiry,28,115,Escalated,3
+CALL-1394,2024-03-12,17:54,Mike Chen,General Inquiry,27,150,Escalated,3
+CALL-1395,2024-03-23,11:26,Robert Garcia,Account Changes,50,285,Escalated,3
+CALL-1396,2024-05-12,17:52,Sarah Johnson,Technical Support,34,511,Resolved,4
+CALL-1397,2024-05-14,17:01,Emily Davis,Billing Inquiry,43,90,Resolved,5
+CALL-1398,2024-04-02,16:17,David Brown,Complaint,5,295,Resolved,3
+CALL-1399,2024-04-05,14:28,Emily Davis,General Inquiry,20,127,Resolved,5
+CALL-1400,2024-03-07,16:44,Mike Chen,Technical Support,15,469,Resolved,5
+CALL-1401,2024-02-26,15:43,James Wilson,Technical Support,41,433,Escalated,3
+CALL-1402,2024-01-03,13:08,Emily Davis,Account Changes,40,242,Escalated,3
+CALL-1403,2024-06-13,11:57,Amanda Taylor,Complaint,31,316,Resolved,5
+CALL-1404,2024-06-08,12:06,Sarah Johnson,Technical Support,5,213,Resolved,5
+CALL-1405,2024-06-04,11:43,Mike Chen,Technical Support,36,506,Resolved,4
+CALL-1406,2024-06-16,16:57,Lisa Martinez,Billing Inquiry,10,175,Resolved,5
+CALL-1407,2024-06-02,12:20,Emily Davis,New Service,5,50,Resolved,5
+CALL-1408,2024-04-09,16:37,Robert Garcia,Complaint,7,418,Escalated,3
+CALL-1409,2024-05-01,18:42,David Brown,Technical Support,46,220,Callback Scheduled,1
+CALL-1410,2024-01-25,13:47,Lisa Martinez,New Service,5,273,Callback Scheduled,3
+CALL-1411,2024-06-16,09:22,James Wilson,New Service,12,538,Resolved,4
+CALL-1412,2024-03-16,13:07,Chris Anderson,Billing Inquiry,7,126,Resolved,5
+CALL-1413,2024-02-19,14:55,Amanda Taylor,Technical Support,10,552,Resolved,5
+CALL-1414,2024-03-28,12:36,Chris Anderson,Billing Inquiry,33,154,Resolved,4
+CALL-1415,2024-02-15,11:03,Sarah Johnson,Technical Support,53,630,Resolved,4
+CALL-1416,2024-01-23,10:27,Amanda Taylor,Technical Support,64,393,Resolved,3
+CALL-1417,2024-04-05,18:57,David Brown,New Service,21,356,Resolved,5
+CALL-1418,2024-02-27,16:22,Lisa Martinez,Billing Inquiry,5,228,Resolved,5
+CALL-1419,2024-03-17,18:29,Jennifer White,Account Changes,5,368,Unresolved,1
+CALL-1420,2024-05-05,12:12,Emily Davis,General Inquiry,42,102,Resolved,5
+CALL-1421,2024-02-03,10:01,Robert Garcia,Technical Support,67,558,Escalated,3
+CALL-1422,2024-06-12,11:34,Robert Garcia,Billing Inquiry,74,177,Resolved,2
+CALL-1423,2024-06-25,09:28,Amanda Taylor,Billing Inquiry,24,263,Resolved,5
+CALL-1424,2024-01-03,11:42,Mike Chen,Account Changes,41,337,Resolved,5
+CALL-1425,2024-01-27,14:39,Mike Chen,Technical Support,50,275,Resolved,5
+CALL-1426,2024-05-13,19:22,Amanda Taylor,Technical Support,47,456,Resolved,5
+CALL-1427,2024-03-25,11:00,Mike Chen,Complaint,60,184,Resolved,3
+CALL-1428,2024-05-10,09:46,Mike Chen,Complaint,11,221,Unresolved,1
+CALL-1429,2024-01-13,09:11,Sarah Johnson,Complaint,5,404,Escalated,2
+CALL-1430,2024-01-12,08:08,Emily Davis,Technical Support,64,226,Resolved,5
+CALL-1431,2024-04-05,17:11,Mike Chen,Technical Support,40,396,Resolved,5
+CALL-1432,2024-04-17,15:51,Emily Davis,Billing Inquiry,42,162,Callback Scheduled,1
+CALL-1433,2024-04-16,18:30,Robert Garcia,Account Changes,33,303,Resolved,3
+CALL-1434,2024-06-24,17:46,Emily Davis,Technical Support,5,439,Resolved,3
+CALL-1435,2024-06-16,11:45,Jennifer White,New Service,22,295,Unresolved,2
+CALL-1436,2024-03-27,14:44,Robert Garcia,Billing Inquiry,37,145,Resolved,5
+CALL-1437,2024-04-08,10:52,Jennifer White,Complaint,42,291,Unresolved,2
+CALL-1438,2024-04-30,17:55,Emily Davis,Billing Inquiry,10,182,Unresolved,1
+CALL-1439,2024-02-27,14:24,Amanda Taylor,Complaint,64,346,Escalated,2
+CALL-1440,2024-05-07,13:07,Chris Anderson,New Service,45,372,Resolved,5
+CALL-1441,2024-01-24,16:39,Lisa Martinez,Complaint,5,249,Escalated,3
+CALL-1442,2024-01-14,17:54,Chris Anderson,Technical Support,27,250,Escalated,3
+CALL-1443,2024-04-25,09:48,James Wilson,Billing Inquiry,7,240,Escalated,3
+CALL-1444,2024-04-05,16:02,Emily Davis,Technical Support,39,233,Resolved,4
+CALL-1445,2024-02-20,10:59,Amanda Taylor,Billing Inquiry,50,148,Resolved,5
+CALL-1446,2024-01-12,18:53,Robert Garcia,Billing Inquiry,42,142,Resolved,5
+CALL-1447,2024-05-07,08:47,Sarah Johnson,Account Changes,5,279,Callback Scheduled,2
+CALL-1448,2024-02-15,16:11,Emily Davis,Billing Inquiry,10,118,Resolved,5
+CALL-1449,2024-04-17,19:58,James Wilson,Technical Support,76,344,Resolved,3
+CALL-1450,2024-04-15,15:56,Jennifer White,Technical Support,33,181,Escalated,4
+CALL-1451,2024-06-10,10:13,Robert Garcia,New Service,27,135,Resolved,5
+CALL-1452,2024-02-15,14:44,David Brown,New Service,46,221,Resolved,5
+CALL-1453,2024-04-16,15:57,Jennifer White,Technical Support,65,232,Resolved,2
+CALL-1454,2024-02-07,09:03,James Wilson,Technical Support,37,67,Resolved,4
+CALL-1455,2024-01-16,16:18,James Wilson,New Service,60,399,Resolved,5
+CALL-1456,2024-05-23,17:47,Jennifer White,Technical Support,5,404,Resolved,5
+CALL-1457,2024-01-13,18:24,Amanda Taylor,General Inquiry,42,115,Resolved,3
+CALL-1458,2024-03-05,10:55,Chris Anderson,Complaint,71,225,Escalated,3
+CALL-1459,2024-05-19,16:12,James Wilson,Technical Support,38,591,Resolved,4
+CALL-1460,2024-05-11,09:02,Amanda Taylor,Technical Support,23,494,Escalated,2
+CALL-1461,2024-04-29,16:09,Sarah Johnson,Billing Inquiry,22,195,Callback Scheduled,2
+CALL-1462,2024-06-18,11:50,Robert Garcia,Account Changes,73,289,Resolved,5
+CALL-1463,2024-05-13,09:32,Emily Davis,Technical Support,16,407,Resolved,4
+CALL-1464,2024-03-25,11:18,James Wilson,General Inquiry,28,92,Resolved,5
+CALL-1465,2024-06-15,08:42,David Brown,Technical Support,47,321,Resolved,5
+CALL-1466,2024-06-23,17:24,Mike Chen,Technical Support,9,394,Callback Scheduled,3
+CALL-1467,2024-04-05,14:32,Chris Anderson,Technical Support,36,595,Resolved,3
+CALL-1468,2024-01-25,10:49,Jennifer White,Technical Support,35,357,Resolved,4
+CALL-1469,2024-06-24,12:06,James Wilson,Technical Support,8,90,Escalated,3
+CALL-1470,2024-01-19,16:09,Sarah Johnson,Technical Support,20,466,Resolved,5
+CALL-1471,2024-05-22,09:52,James Wilson,Complaint,6,354,Escalated,3
+CALL-1472,2024-04-09,15:34,Sarah Johnson,Account Changes,20,158,Resolved,5
+CALL-1473,2024-01-19,11:32,Mike Chen,Technical Support,34,261,Resolved,5
+CALL-1474,2024-04-07,12:42,Sarah Johnson,Technical Support,14,405,Resolved,5
+CALL-1475,2024-05-19,11:40,Emily Davis,Technical Support,84,206,Callback Scheduled,2
+CALL-1476,2024-01-03,14:35,Emily Davis,Billing Inquiry,71,182,Resolved,5
+CALL-1477,2024-03-19,10:47,David Brown,Billing Inquiry,77,121,Resolved,3
+CALL-1478,2024-06-06,17:12,Mike Chen,Billing Inquiry,37,79,Callback Scheduled,3
+CALL-1479,2024-05-20,13:35,Mike Chen,Technical Support,33,443,Escalated,3
+CALL-1480,2024-03-25,11:42,James Wilson,Billing Inquiry,13,100,Resolved,5
+CALL-1481,2024-06-06,15:44,Robert Garcia,Billing Inquiry,11,140,Unresolved,1
+CALL-1482,2024-03-21,11:14,Amanda Taylor,Technical Support,25,566,Resolved,5
+CALL-1483,2024-04-24,11:19,Chris Anderson,Account Changes,57,327,Escalated,4
+CALL-1484,2024-02-05,18:12,Lisa Martinez,New Service,5,235,Callback Scheduled,3
+CALL-1485,2024-06-10,08:37,Robert Garcia,Technical Support,5,273,Resolved,5
+CALL-1486,2024-05-18,13:49,Emily Davis,Technical Support,30,633,Escalated,2
+CALL-1487,2024-04-28,14:05,Amanda Taylor,Technical Support,59,426,Unresolved,3
+CALL-1488,2024-06-24,10:32,Emily Davis,Technical Support,65,697,Resolved,5
+CALL-1489,2024-05-03,18:02,James Wilson,New Service,26,444,Resolved,5
+CALL-1490,2024-05-12,18:23,Amanda Taylor,Technical Support,19,430,Unresolved,1
+CALL-1491,2024-06-29,19:40,Lisa Martinez,Complaint,22,412,Resolved,5
+CALL-1492,2024-04-03,15:57,Mike Chen,Technical Support,13,612,Resolved,4
+CALL-1493,2024-03-29,13:30,Robert Garcia,Billing Inquiry,40,140,Resolved,5
+CALL-1494,2024-03-12,10:11,Emily Davis,Technical Support,42,358,Resolved,5
+CALL-1495,2024-01-30,13:30,Chris Anderson,Billing Inquiry,45,266,Resolved,3
+CALL-1496,2024-05-26,15:08,Jennifer White,Billing Inquiry,38,171,Resolved,4
+CALL-1497,2024-04-13,15:36,Sarah Johnson,Complaint,39,134,Unresolved,1
+CALL-1498,2024-06-04,19:55,Chris Anderson,Billing Inquiry,38,115,Escalated,4
+CALL-1499,2024-02-16,15:32,Lisa Martinez,Billing Inquiry,27,67,Resolved,3
