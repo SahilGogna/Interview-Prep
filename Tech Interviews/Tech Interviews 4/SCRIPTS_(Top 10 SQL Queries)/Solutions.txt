@@ -1,0 +1,397 @@
+
+
+
+
+
+
+
+
+--- **************************************************************************************** ---               
+
+
+--- Q7 : Derive the output --- 
+
+-- Solution using CASE statement in PostgreSQL
+select customer_id
+, sum(case when to_char(sales_date,'Mon-YY') = 'Jan-21' then replace(amount,'$','')::int else 0 end) as "Jan-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Feb-21' then replace(amount,'$','')::int else 0 end) as "Feb-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Mar-21' then replace(amount,'$','')::int else 0 end) as "Mar-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Apr-21' then replace(amount,'$','')::int else 0 end) as "Apr-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'May-21' then replace(amount,'$','')::int else 0 end) as "May-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Jun-21' then replace(amount,'$','')::int else 0 end) as "Jun-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Jul-21' then replace(amount,'$','')::int else 0 end) as "Jul-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Aug-21' then replace(amount,'$','')::int else 0 end) as "Aug-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Sep-21' then replace(amount,'$','')::int else 0 end) as "Sep-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Oct-21' then replace(amount,'$','')::int else 0 end) as "Oct-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Nov-21' then replace(amount,'$','')::int else 0 end) as "Nov-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Dec-21' then replace(amount,'$','')::int else 0 end) as "Dec-21"
+, sum(replace(amount,'$','')::int) as total
+from sales_data
+group by customer_id
+    union
+select 'Total' as customer_id
+, sum(case when to_char(sales_date,'Mon-YY') = 'Jan-21' then replace(amount,'$','')::int else 0 end) as "Jan-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Feb-21' then replace(amount,'$','')::int else 0 end) as "Feb-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Mar-21' then replace(amount,'$','')::int else 0 end) as "Mar-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Apr-21' then replace(amount,'$','')::int else 0 end) as "Apr-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'May-21' then replace(amount,'$','')::int else 0 end) as "May-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Jun-21' then replace(amount,'$','')::int else 0 end) as "Jun-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Jul-21' then replace(amount,'$','')::int else 0 end) as "Jul-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Aug-21' then replace(amount,'$','')::int else 0 end) as "Aug-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Sep-21' then replace(amount,'$','')::int else 0 end) as "Sep-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Oct-21' then replace(amount,'$','')::int else 0 end) as "Oct-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Nov-21' then replace(amount,'$','')::int else 0 end) as "Nov-21"
+, sum(case when to_char(sales_date,'Mon-YY') = 'Dec-21' then replace(amount,'$','')::int else 0 end) as "Dec-21"
+, null as total
+from sales_data
+order by 1;
+
+-- Solution in MySQL using CASE statement (MySQL does not support PIVOT and CROSSTAB)
+select customer_id
+, case when Jan_21 < 0 then '(' || (Jan_21 * -1) || ')$' else Jan_21 || '$' end as "Jan-21"
+, case when Feb_21 < 0 then '(' || (Feb_21 * -1) || ')$' else Feb_21 || '$' end as "Feb-21"
+, case when Mar_21 < 0 then '(' || (Mar_21 * -1) || ')$' else Mar_21 || '$' end as "Mar-21"
+, case when Apr_21 < 0 then '(' || (Apr_21 * -1) || ')$' else Apr_21 || '$' end as "Apr-21"
+, case when May_21 < 0 then '(' || (May_21 * -1) || ')$' else May_21 || '$' end as "May-21"
+, case when Jun_21 < 0 then '(' || (Jun_21 * -1) || ')$' else Jun_21 || '$' end as "Jun-21"
+, case when Jul_21 < 0 then '(' || (Jul_21 * -1) || ')$' else Jul_21 || '$' end as "Jul-21"
+, case when Aug_21 < 0 then '(' || (Aug_21 * -1) || ')$' else Aug_21 || '$' end as "Aug-21"
+, case when Sep_21 < 0 then '(' || (Sep_21 * -1) || ')$' else Sep_21 || '$' end as "Sep-21"
+, case when Oct_21 < 0 then '(' || (Oct_21 * -1) || ')$' else Oct_21 || '$' end as "Oct-21"
+, case when Nov_21 < 0 then '(' || (Nov_21 * -1) || ')$' else Nov_21 || '$' end as "Nov-21"
+, case when Dec_21 < 0 then '(' || (Dec_21 * -1) || ')$' else Dec_21 || '$' end as "Dec-21"
+, case when total < 0 then '(' || (total * 1) || ')$' else total || '$' end as total
+from (
+    select customer_id
+    , sum(case when date_format(sales_date,'%b-%y') = 'Jan-21' then replace(amount,'$','') else 0 end) as Jan_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Feb-21' then replace(amount,'$','') else 0 end) as Feb_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Mar-21' then replace(amount,'$','') else 0 end) as Mar_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Apr-21' then replace(amount,'$','') else 0 end) as Apr_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'May-21' then replace(amount,'$','') else 0 end) as May_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Jun-21' then replace(amount,'$','') else 0 end) as Jun_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Jul-21' then replace(amount,'$','') else 0 end) as Jul_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Aug-21' then replace(amount,'$','') else 0 end) as Aug_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Sep-21' then replace(amount,'$','') else 0 end) as Sep_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Oct-21' then replace(amount,'$','') else 0 end) as Oct_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Nov-21' then replace(amount,'$','') else 0 end) as Nov_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Dec-21' then replace(amount,'$','') else 0 end) as Dec_21
+    , sum(replace(amount,'$','')) as total
+    from sales_data
+    group by customer_id
+        union
+    select 'Total' as customer_id
+    , sum(case when date_format(sales_date,'%b-%y') = 'Jan-21' then replace(amount,'$','') else 0 end) as Jan_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Feb-21' then replace(amount,'$','') else 0 end) as Feb_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Mar-21' then replace(amount,'$','') else 0 end) as Mar_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Apr-21' then replace(amount,'$','') else 0 end) as Apr_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'May-21' then replace(amount,'$','') else 0 end) as May_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Jun-21' then replace(amount,'$','') else 0 end) as Jun_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Jul-21' then replace(amount,'$','') else 0 end) as Jul_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Aug-21' then replace(amount,'$','') else 0 end) as Aug_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Sep-21' then replace(amount,'$','') else 0 end) as Sep_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Oct-21' then replace(amount,'$','') else 0 end) as Oct_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Nov-21' then replace(amount,'$','') else 0 end) as Nov_21
+    , sum(case when date_format(sales_date,'%b-%y') = 'Dec-21' then replace(amount,'$','') else 0 end) as Dec_21
+    , null as total
+    from sales_data
+    ) x
+order by 1;
+
+-- Solution in Oracle using Pivot
+select customer_id
+, case when Jan_21<0 then '(' || (Jan_21*-1) || ')$' else Jan_21||'$' end as Jan_21
+, case when Feb_21<0 then '(' || (Feb_21*-1) || ')$' else Feb_21||'$' end as Feb_21
+, case when Mar_21<0 then '(' || (Mar_21*-1) || ')$' else Mar_21||'$' end as Mar_21
+, case when Apr_21<0 then '(' || (Apr_21*-1) || ')$' else Apr_21||'$' end as Apr_21
+, case when May_21<0 then '(' || (May_21*-1) || ')$' else May_21||'$' end as May_21
+, case when Jun_21<0 then '(' || (Jun_21*-1) || ')$' else Jun_21||'$' end as Jun_21
+, case when Jul_21<0 then '(' || (Jul_21*-1) || ')$' else Jul_21||'$' end as Jul_21
+, case when Aug_21<0 then '(' || (Aug_21*-1) || ')$' else Aug_21||'$' end as Aug_21
+, case when Sep_21<0 then '(' || (Sep_21*-1) || ')$' else Sep_21||'$' end as Sep_21
+, case when Oct_21<0 then '(' || (Oct_21*-1) || ')$' else Oct_21||'$' end as Oct_21
+, case when Nov_21<0 then '(' || (Nov_21*-1) || ')$' else Nov_21||'$' end as Nov_21
+, case when Dec_21<0 then '(' || (Dec_21*-1) || ')$' else Dec_21||'$' end as Dec_21
+, case when customer_id = 'Total' then null
+         else case when to_number(total) < 0 then '(' || (total*-1) || ')$' else total||'$' end
+  end as total
+from (
+        select x.*
+        , (Jan_21 + Feb_21 + Mar_21 + Apr_21 + May_21 + Jun_21
+         + Jul_21 + Aug_21 + Sep_21 + Oct_21 + Nov_21 + Dec_21) as total
+        from (
+            select customer_id
+            , nvl(Jan_21,0) as Jan_21
+            , nvl(Feb_21,0) as Feb_21
+            , nvl(Mar_21,0) as Mar_21
+            , nvl(Apr_21,0) as Apr_21
+            , nvl(May_21,0) as May_21
+            , nvl(Jun_21,0) as Jun_21
+            , nvl(Jul_21,0) as Jul_21
+            , nvl(Aug_21,0) as Aug_21
+            , nvl(Sep_21,0) as Sep_21
+            , nvl(Oct_21,0) as Oct_21
+            , nvl(Nov_21,0) as Nov_21
+            , nvl(Dec_21,0) as Dec_21
+            from (
+                select customer_id, to_char(sales_date,'Mon-YY') as month, to_number(replace(amount,'$','')) as amount
+                from sales_data s
+                )
+            pivot
+            (
+            sum(amount)
+            for month in ('Jan-21' as Jan_21, 'Feb-21' as Feb_21, 'Mar-21' as Mar_21, 'Apr-21' as Apr_21
+                            ,'May-21' as May_21, 'Jun-21' as Jun_21, 'Jul-21' as Jul_21, 'Aug-21' as Aug_21
+                            ,'Sep-21' as Sep_21, 'Oct-21' as Oct_21, 'Nov-21' as Nov_21, 'Dec-21' as Dec_21)
+            )
+            order by customer_id) x
+        UNION
+        select 'Total' as customer_id
+            , nvl(Jan_21,0) as Jan_21
+            , nvl(Feb_21,0) as Feb_21
+            , nvl(Mar_21,0) as Mar_21
+            , nvl(Apr_21,0) as Apr_21
+            , nvl(May_21,0) as May_21
+            , nvl(Jun_21,0) as Jun_21
+            , nvl(Jul_21,0) as Jul_21
+            , nvl(Aug_21,0) as Aug_21
+            , nvl(Sep_21,0) as Sep_21
+            , nvl(Oct_21,0) as Oct_21
+            , nvl(Nov_21,0) as Nov_21
+            , nvl(Dec_21,0) as Dec_21
+            , null as total
+            from (
+                select  to_char(sales_date,'Mon-YY') as month, to_number(replace(amount,'$','')) as amount
+                from sales_data s
+                )
+            pivot
+            (
+            sum(amount)
+            for month in ('Jan-21' as Jan_21, 'Feb-21' as Feb_21, 'Mar-21' as Mar_21, 'Apr-21' as Apr_21
+                            ,'May-21' as May_21, 'Jun-21' as Jun_21, 'Jul-21' as Jul_21, 'Aug-21' as Aug_21
+                            ,'Sep-21' as Sep_21, 'Oct-21' as Oct_21, 'Nov-21' as Nov_21, 'Dec-21' as Dec_21)
+            )
+    ) z;
+
+-- Solution in MSSQL using Pivot
+select customer_id
+, case when Jan_21<0 then concat( '(' , (Jan_21*-1) , ')$' ) else concat( Jan_21 , '$' ) end as Jan_21
+, case when Feb_21<0 then concat( '(' , (Feb_21*-1) , ')$' ) else concat( Feb_21 , '$' ) end as Feb_21
+, case when Mar_21<0 then concat( '(' , (Mar_21*-1) , ')$' ) else concat( Mar_21 , '$' ) end as Mar_21
+, case when Apr_21<0 then concat( '(' , (Apr_21*-1) , ')$' ) else concat( Apr_21 , '$' ) end as Apr_21
+, case when May_21<0 then concat( '(' , (May_21*-1) , ')$' ) else concat( May_21 , '$' ) end as May_21
+, case when Jun_21<0 then concat( '(' , (Jun_21*-1) , ')$' ) else concat( Jun_21 , '$' ) end as Jun_21
+, case when Jul_21<0 then concat( '(' , (Jul_21*-1) , ')$' ) else concat( Jul_21 , '$' ) end as Jul_21
+, case when Aug_21<0 then concat( '(' , (Aug_21*-1) , ')$' ) else concat( Aug_21 , '$' ) end as Aug_21
+, case when Sep_21<0 then concat( '(' , (Sep_21*-1) , ')$' ) else concat( Sep_21 , '$' ) end as Sep_21
+, case when Oct_21<0 then concat( '(' , (Oct_21*-1) , ')$' ) else concat( Oct_21 , '$' ) end as Oct_21
+, case when Nov_21<0 then concat( '(' , (Nov_21*-1) , ')$' ) else concat( Nov_21 , '$' ) end as Nov_21
+, case when Dec_21<0 then concat( '(' , (Dec_21*-1) , ')$' ) else concat( Dec_21 , '$' ) end as Dec_21
+, case when customer_id = 'Total' then null
+       else case when total < 0 then concat( '(' , (total*-1) , ')$' ) else concat( total , '$' ) end
+  end as total
+from (
+    select a.*
+    , (Jan_21 + Feb_21 + Mar_21 + Apr_21 + May_21 + Jun_21
+    + Jul_21 + Aug_21 + Sep_21 + Oct_21 + Nov_21 + Dec_21) as total
+    from (
+        select customer_id
+            , coalesce([Jan-21],0) as Jan_21
+            , coalesce([Feb-21],0) as Feb_21
+            , coalesce([Mar-21],0) as Mar_21
+            , coalesce([Apr-21],0) as Apr_21
+            , coalesce([May-21],0) as May_21
+            , coalesce([Jun-21],0) as Jun_21
+            , coalesce([Jul-21],0) as Jul_21
+            , coalesce([Aug-21],0) as Aug_21
+            , coalesce([Sep-21],0) as Sep_21
+            , coalesce([Oct-21],0) as Oct_21
+            , coalesce([Nov-21],0) as Nov_21
+            , coalesce([Dec-21],0) as Dec_21
+            from (
+                select customer_id, format(sales_date, 'MMM-yy') as month, cast(replace(amount,'$','') as int) as amount
+                from sales_data s
+                ) as x
+            pivot
+            (
+            sum(amount)
+            for month in ([Jan-21], [Feb-21], [Mar-21], [Apr-21]
+                            ,[May-21], [Jun-21] , [Jul-21], [Aug-21]
+                            ,[Sep-21], [Oct-21] , [Nov-21], [Dec-21] )
+            ) as y
+            ) a
+    union
+    select 'Total' as customer_id
+            , coalesce([Jan-21],0) as Jan_21
+            , coalesce([Feb-21],0) as Feb_21
+            , coalesce([Mar-21],0) as Mar_21
+            , coalesce([Apr-21],0) as Apr_21
+            , coalesce([May-21],0) as May_21
+            , coalesce([Jun-21],0) as Jun_21
+            , coalesce([Jul-21],0) as Jul_21
+            , coalesce([Aug-21],0) as Aug_21
+            , coalesce([Sep-21],0) as Sep_21
+            , coalesce([Oct-21],0) as Oct_21
+            , coalesce([Nov-21],0) as Nov_21
+            , coalesce([Dec-21],0) as Dec_21
+            , null as total
+            from (
+                select format(sales_date, 'MMM-yy') as month, cast(replace(amount,'$','') as int) as amount
+                from sales_data s
+                ) as x
+            pivot
+            (
+            sum(amount)
+            for month in ([Jan-21], [Feb-21], [Mar-21], [Apr-21]
+                            ,[May-21], [Jun-21] , [Jul-21], [Aug-21]
+                            ,[Sep-21], [Oct-21] , [Nov-21], [Dec-21] )
+            ) as y
+    ) z;
+
+-- Solution in PostgreSQL using CROSSTAB
+CREATE EXTENSION TABLEFUNC;
+
+select customer_id
+, case when Jan_21<0 then '(' || (Jan_21*-1) || ')$' else Jan_21||'$' end as Jan_21
+, case when Feb_21<0 then '(' || (Feb_21*-1) || ')$' else Feb_21||'$' end as Feb_21
+, case when Mar_21<0 then '(' || (Mar_21*-1) || ')$' else Mar_21||'$' end as Mar_21
+, case when Apr_21<0 then '(' || (Apr_21*-1) || ')$' else Apr_21||'$' end as Apr_21
+, case when May_21<0 then '(' || (May_21*-1) || ')$' else May_21||'$' end as May_21
+, case when Jun_21<0 then '(' || (Jun_21*-1) || ')$' else Jun_21||'$' end as Jun_21
+, case when Jul_21<0 then '(' || (Jul_21*-1) || ')$' else Jul_21||'$' end as Jul_21
+, case when Aug_21<0 then '(' || (Aug_21*-1) || ')$' else Aug_21||'$' end as Aug_21
+, case when Sep_21<0 then '(' || (Sep_21*-1) || ')$' else Sep_21||'$' end as Sep_21
+, case when Oct_21<0 then '(' || (Oct_21*-1) || ')$' else Oct_21||'$' end as Oct_21
+, case when Nov_21<0 then '(' || (Nov_21*-1) || ')$' else Nov_21||'$' end as Nov_21
+, case when Dec_21<0 then '(' || (Dec_21*-1) || ')$' else Dec_21||'$' end as Dec_21
+, case when total < 0 then '(' || (total*-1) || ')$' else total||'$' end as total
+from (
+    select x.*
+    , (Jan_21 + Feb_21 + Mar_21 + Apr_21 + May_21 + Jun_21
+     + Jul_21 + Aug_21 + Sep_21 + Oct_21 + Nov_21 + Dec_21) as total
+    from (
+        select customer_id
+        , coalesce(Jan_21,0) as Jan_21
+        , coalesce(Feb_21,0) as Feb_21
+        , coalesce(Mar_21,0) as Mar_21
+        , coalesce(Apr_21,0) as Apr_21
+        , coalesce(May_21,0) as May_21
+        , coalesce(Jun_21,0) as Jun_21
+        , coalesce(Jul_21,0) as Jul_21
+        , coalesce(Aug_21,0) as Aug_21
+        , coalesce(Sep_21,0) as Sep_21
+        , coalesce(Oct_21,0) as Oct_21
+        , coalesce(Nov_21,0) as Nov_21
+        , coalesce(Dec_21,0) as Dec_21
+        from crosstab('select customer_id, to_char(sales_date,''Mon-YY'') as month, sum(replace(amount,''$'','''')::int) as amount
+                        from sales_data
+                        group by customer_id, to_char(sales_date,''Mon-YY'')
+                        order by customer_id'
+                      , 'values (''Jan-21''), (''Feb-21''), (''Mar-21''), (''Apr-21'')
+                              , (''May-21''), (''Jun-21''), (''Jul-21''), (''Aug-21'')
+                              , (''Sep-21''), (''Oct-21''), (''Nov-21''), (''Dec-21'')')
+            AS FINAL_RESULT(customer_id varchar, Jan_21 bigint, Feb_21 bigint, Mar_21 bigint
+                           , Apr_21 bigint, May_21 bigint, Jun_21 bigint, Jul_21 bigint
+                           , Aug_21 bigint, Sep_21 bigint, Oct_21 bigint, Nov_21 bigint, Dec_21 bigint)
+        ) x
+        union
+    select customer_id
+        , coalesce(Jan_21,0) as Jan_21
+        , coalesce(Feb_21,0) as Feb_21
+        , coalesce(Mar_21,0) as Mar_21
+        , coalesce(Apr_21,0) as Apr_21
+        , coalesce(May_21,0) as May_21
+        , coalesce(Jun_21,0) as Jun_21
+        , coalesce(Jul_21,0) as Jul_21
+        , coalesce(Aug_21,0) as Aug_21
+        , coalesce(Sep_21,0) as Sep_21
+        , coalesce(Oct_21,0) as Oct_21
+        , coalesce(Nov_21,0) as Nov_21
+        , coalesce(Dec_21,0) as Dec_21
+        , null as total
+        from crosstab('select ''Total'' as customer_id, to_char(sales_date,''Mon-YY'') as month, sum(replace(amount,''$'','''')::int) as amount
+                        from sales_data
+                        group by to_char(sales_date,''Mon-YY'') '
+                      , 'values (''Jan-21''), (''Feb-21''), (''Mar-21''), (''Apr-21'')
+                              , (''May-21''), (''Jun-21''), (''Jul-21''), (''Aug-21'')
+                              , (''Sep-21''), (''Oct-21''), (''Nov-21''), (''Dec-21'')')
+            AS FINAL_RESULT(customer_id varchar, Jan_21 bigint, Feb_21 bigint, Mar_21 bigint
+                           , Apr_21 bigint, May_21 bigint, Jun_21 bigint, Jul_21 bigint
+                           , Aug_21 bigint, Sep_21 bigint, Oct_21 bigint, Nov_21 bigint, Dec_21 bigint)
+    order by customer_id) z
+
+
+--- **************************************************************************************** ---               
+
+
+--- Q8 : Find the hierarchy --- 
+
+-- Solution
+with recursive cte as
+    ( 
+    select * from emp_details 
+    where name = 'Asha'
+    union
+    select e.*
+    from cte 
+    join emp_details e on e.manager_id = cte.id
+    )
+select *
+from cte;
+
+
+--- **************************************************************************************** ---               
+
+
+--- Q9 : Find difference in average sales --- 
+
+-- Solution
+with cte as
+        (select year_id, month_id, to_char(order_date, 'MON') as mon, avg(sales) as avg_sales_per_month
+        from sales_order s
+        where year_id in (2003, 2004)
+        group by year_id, month_id, to_char(order_date, 'MON'))
+select y03.mon, round(abs(y03.avg_sales_per_month - y04.avg_sales_per_month)::decimal,2) as diff
+from cte y03
+join cte y04 on y03.mon = y04.mon
+where y03.year_id = 2003
+and y04.year_id = 2004
+order by y03.month_id;
+
+
+--- **************************************************************************************** ---               
+
+
+--- Q10: Pizza Delivery Status --- 
+
+-- Solution 
+select distinct cust_name as customer_name, 'COMPLETED' as status
+from cust_orders D
+where D.status = 'DELIVERED'
+and not exists (select 1 from cust_orders d2
+                where d2.cust_name=d.cust_name
+                and d2.status in ('SUBMITTED','CREATED'))
+    union
+select distinct cust_name as customer_name, 'IN PROGRESS' as status
+from cust_orders D
+where D.status = 'DELIVERED'
+and  exists (select 1 from cust_orders d2
+                where d2.cust_name=d.cust_name
+                and d2.status in ('SUBMITTED','CREATED'))
+    union
+select distinct cust_name as customer_name, 'AWAITING PROGRESS' as status
+from cust_orders D
+where D.status = 'SUBMITTED'
+and not exists (select 1 from cust_orders d2
+                where d2.cust_name=d.cust_name
+                and d2.status in ('DELIVERED'))
+    union
+select distinct cust_name as customer_name, 'AWAITING SUBMISSION' as status
+from cust_orders D
+where D.status = 'CREATED'
+and not exists (select 1 from cust_orders d2
+                where d2.cust_name=d.cust_name
+                and d2.status in ('DELIVERED','SUBMITTED'));
+
+
+
+

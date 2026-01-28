@@ -1,0 +1,28 @@
+--- Q7 : Derive the output --- 
+
+drop table sales_data;
+create table sales_data
+    (
+        sales_date      date,
+        customer_id     varchar(30),
+        amount          varchar(30)
+    );
+insert into sales_data values ('01-Jan-2021', 'Cust-1', '50$');
+insert into sales_data values ('02-Jan-2021', 'Cust-1', '50$');
+insert into sales_data values ('03-Jan-2021', 'Cust-1', '50$');
+insert into sales_data values ('01-Jan-2021', 'Cust-2', '100$');
+insert into sales_data values ('02-Jan-2021', 'Cust-2', '100$');
+insert into sales_data values ('03-Jan-2021', 'Cust-2', '100$');
+insert into sales_data values ('01-Feb-2021', 'Cust-2', '-100$');
+insert into sales_data values ('02-Feb-2021', 'Cust-2', '-100$');
+insert into sales_data values ('03-Feb-2021', 'Cust-2', '-100$');
+insert into sales_data values ('01-Mar-2021', 'Cust-3', '1$');
+insert into sales_data values ('01-Apr-2021', 'Cust-3', '1$');
+insert into sales_data values ('01-May-2021', 'Cust-3', '1$');
+insert into sales_data values ('01-Jun-2021', 'Cust-3', '1$');
+insert into sales_data values ('01-Jul-2021', 'Cust-3', '-1$');
+insert into sales_data values ('01-Aug-2021', 'Cust-3', '-1$');
+insert into sales_data values ('01-Sep-2021', 'Cust-3', '-1$');
+insert into sales_data values ('01-Oct-2021', 'Cust-3', '-1$');
+insert into sales_data values ('01-Nov-2021', 'Cust-3', '-1$');
+insert into sales_data values ('01-Dec-2021', 'Cust-3', '-1$');
