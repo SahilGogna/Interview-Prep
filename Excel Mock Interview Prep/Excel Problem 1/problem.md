@@ -44,3 +44,9 @@ Import the data in Excel and answer these questions:
 ## Note
 
 This is a hypothetical dataset generated for educational purposes.
+
+---
+
+## Credits
+
+Thanks to [Jashanpreet Sangar](https://www.linkedin.com/in/jashanpreetsangar/) for creating and sharing this dataset.
