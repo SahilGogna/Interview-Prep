@@ -8,8 +8,13 @@
 ---
 
 ## 2. Running the Interview
-- Each peer gets **30 minutes**.
-- The candidate should:
+
+**Total Time: 1 hour**
+- 5 min — Session intro
+- 50 min — Interview (25 min per peer)
+- 5 min — Wrap up
+
+Each peer gets **25 minutes**. The candidate should:
   - Explore the data first (check columns, data types, missing values).
   - Create visualizations to support their analysis.
   - Explain their thinking step by step.

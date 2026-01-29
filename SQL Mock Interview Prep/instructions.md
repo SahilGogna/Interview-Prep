@@ -8,10 +8,15 @@
 ---
 
 ## 2. Running the Interview
-- Each peer gets **30 minutes**.
-- Ask 2-3 questions, mixing difficulty levels:
+
+**Total Time: 1 hour**
+- 5 min — Session intro
+- 50 min — Interview (25 min per peer)
+- 5 min — Wrap up
+
+Each peer gets **25 minutes**. Ask 2-3 questions, mixing difficulty levels:
   - **Easy** → Warm-up (5-10 min)
-  - **Medium** → Main challenge (15-20 min)
+  - **Medium** → Main challenge (15 min)
 - Encourage your peer to:
   - Explain their thinking step by step.
   - Ask clarifying questions about the schema.
