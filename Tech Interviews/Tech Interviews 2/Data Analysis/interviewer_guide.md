@@ -1,4 +1,4 @@
-# 🗣️ Peer Interview Guide — MyStrivera Mock (Data Analysis Using Pandas)
+# 🗣️ Peer Interview Guide — ORU Mock (Data Analysis Using Pandas)
 
 ### 🎯 Purpose
 To simulate a **real data analysis interview** using Python & Pandas, focusing on cleaning, aggregation, and analytical reasoning.

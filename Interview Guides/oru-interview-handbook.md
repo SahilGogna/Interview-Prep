@@ -1,6 +1,6 @@
-# Interview Preparation Guide for MyStrivera Community
+# Interview Preparation Guide for ORU Community
 
-Welcome, MyStrivera community members! This guide is designed to help you prepare for your 
+Welcome, ORU community members! This guide is designed to help you prepare for your 
 upcoming mock interviews, covering the typical rounds you can expect in a technical hiring 
 process: Screening, Behavioral, and Technical. While the sample questions provided are 
 general, they offer a solid foundation for your preparation. Remember to always tailor your 

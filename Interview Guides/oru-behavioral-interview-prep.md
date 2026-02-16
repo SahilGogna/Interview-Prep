@@ -5,7 +5,7 @@ Use the **STAR Method** (Situation, Task, Action, Result) to structure your answ
 
 ---
 
-## 🔟 Top 10 Must-Prepare Behavioral Questions
+## Top 10 Must-Prepare Behavioral Questions
 1. Tell me about a time you showed leadership skills.  
 2. Describe a conflict you had with a colleague and how you resolved it.  
 3. Tell me about a time you faced a challenging problem and how you solved it.  
