@@ -2,12 +2,13 @@
 
 ## Overview
 
-This folder contains **14 SQL practice problems** organized by difficulty level, perfect for peer interview practice or solo study.
+This folder contains **31 SQL practice problems** organized by difficulty level, perfect for peer interview practice or solo study.
 
 | Difficulty | Count | Problems |
 |------------|-------|----------|
-| Easy | 9 | 1, 3, 4, 5, 9, 10, 12, 13 |
-| Medium | 5 | 2, 6, 7, 8, 11, 14 |
+| Easy | 13 | 1, 3, 4, 5, 9, 10, 12, 13, 15, 18, 19, 21 |
+| Medium | 12 | 2, 6, 7, 8, 11, 14, 16, 17, 20, 22, 23, 24, 29, 30, 31 |
+| Hard | 6 | 25, 26, 27, 28 |
 
 ---
 
@@ -88,6 +89,10 @@ Share these hints with the candidate before showing the full solution.
 | 10 | Transaction Volumes by Type | GROUP BY, SUM |
 | 12 | Customer Lookup by City | WHERE |
 | 13 | Premium Revenue by Policy Type | GROUP BY |
+| 15 | Flights by Airlines with Cancellations | Subquery, IN |
+| 18 | All Flights by Airlines with Cancellations | Subquery, IN |
+| 19 | Flights to/from Cancelled Destinations | Subquery, IN |
+| 21 | Airlines with Zero Cancellations | Subquery, NOT IN |
 
 ### Medium 
 | # | Title | Topic |
@@ -98,6 +103,23 @@ Share these hints with the candidate before showing the full solution.
 | 8 | Derive IPL Matches | Self-Join, Combinatorics |
 | 11 | Branch Performance Analysis | Multi-table JOIN, CASE |
 | 14 | Agent Performance Evaluation | Multi-table JOIN, CASE |
+| 16 | Average Delay per Airline | Subquery in FROM |
+| 17 | Flight Count with Cancellations | Correlated Subquery, SELECT |
+| 20 | Cancelled Flights at On-Time Gates | Subquery, IN + WHERE |
+| 22 | Destinations with No On-Time Flights | Subquery, NOT IN |
+| 23 | Flights Scheduled Before Any Delayed | ANY Operator |
+| 24 | Flights Scheduled After Any Cancelled | ANY Operator |
+| 29 | Flights That Were Always On Time | NOT EXISTS |
+| 30 | Airlines with Above-Average Delays | Subquery, HAVING |
+| 31 | Busiest Airline by Number of Flights | Nested Subquery, MAX |
+
+### Hard
+| # | Title | Topic |
+|---|-------|-------|
+| 25 | Flights Scheduled After ALL Cancelled | ALL Operator |
+| 26 | Airlines Where Every Flight is On Time | ALL, Correlated Subquery |
+| 27 | Delayed More Than Airline Average | Correlated Subquery |
+| 28 | Most Frequently Used Gate per Terminal | Nested Subquery, Grouped Max |
 
 ---
 
