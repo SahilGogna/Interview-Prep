@@ -19,6 +19,3 @@ List all flight numbers that were **always on time** (never delayed or cancelled
 
 ---
 
-## Solution
-
-[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_29.md)

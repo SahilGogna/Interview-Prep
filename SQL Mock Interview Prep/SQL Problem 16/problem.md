@@ -19,6 +19,3 @@ Find the **average delay time (in minutes) per airline** for delayed flights.
 
 ---
 
-## Solution
-
-[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_16.md)

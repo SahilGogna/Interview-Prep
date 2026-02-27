@@ -19,6 +19,3 @@ List the airline(s) with the **highest number of total flights**.
 
 ---
 
-## Solution
-
-[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_31.md)

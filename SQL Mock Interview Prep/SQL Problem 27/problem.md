@@ -19,6 +19,3 @@ Find all **delayed flights** where the delay (in minutes) is **greater than the 
 
 ---
 
-## Solution
-
-[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_27.md)

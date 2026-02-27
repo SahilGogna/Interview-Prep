@@ -19,6 +19,3 @@ List **cancelled flights** that were assigned to a gate that has also seen **on-
 
 ---
 
-## Solution
-
-[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_20.md)

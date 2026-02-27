@@ -19,6 +19,3 @@ List flights **scheduled before any delayed flight** (i.e., before at least one 
 
 ---
 
-## Solution
-
-[View Solution](https://github.com/SahilGogna/Interview-Prep/blob/main/SQL%20Mock%20Interview%20Prep/SQL%20Solutions/solution_23.md)
