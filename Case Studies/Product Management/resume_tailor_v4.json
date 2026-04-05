@@ -1,0 +1,511 @@
+{
+  "name": "ORU - Resume Tailor",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🎯 Phase 1 — Form & File Intake\nTwo inputs only: Job Description and Resume File.\nExtracts text from the PDF using a Code node.",
+        "height": 220,
+        "width": 500,
+        "color": 4
+      },
+      "id": "sticky-01",
+      "name": "Sticky Note - Phase 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [-40, 60]
+    },
+    {
+      "parameters": {
+        "content": "## 🤖 Phase 2 — AI Resume Generation\nTwo AI Agent nodes using native Anthropic integration:\n1. Resume Generator — tailors resume to job description\n2. LaTeX Converter — converts tailored resume to LaTeX\n\n⚠️ Connect your Anthropic credential to both Chat Model sub-nodes.",
+        "height": 220,
+        "width": 700,
+        "color": 3
+      },
+      "id": "sticky-02",
+      "name": "Sticky Note - Phase 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [500, 60]
+    },
+    {
+      "parameters": {
+        "content": "## 📄 Phase 3 — Overleaf Integration\nAuthenticates into Overleaf, creates a project,\npastes the LaTeX, compiles to PDF, downloads result.\n\n⚠️ Set OVERLEAF_SESSION in your server environment.",
+        "height": 220,
+        "width": 1100,
+        "color": 5
+      },
+      "id": "sticky-03",
+      "name": "Sticky Note - Phase 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1240, 60]
+    },
+    {
+      "parameters": {
+        "content": "## ✉️ Phase 4 — Email Delivery\nEmails the compiled PDF resume to the candidate.\n\n⚠️ Connect Gmail OAuth credential to Send Email node.\n⚠️ Update the TO address to use candidate email.",
+        "height": 220,
+        "width": 420,
+        "color": 2
+      },
+      "id": "sticky-04",
+      "name": "Sticky Note - Phase 4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [2380, 60]
+    },
+    {
+      "parameters": {
+        "formTitle": "ORU Resume Tailor",
+        "formDescription": "Upload your resume and paste the job description. We will generate a tailored ATS-friendly resume and email it to you within minutes.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Email Address",
+              "fieldType": "text",
+              "requiredField": true,
+              "placeholder": "We will send your tailored resume here"
+            },
+            {
+              "fieldLabel": "Job Description",
+              "fieldType": "textarea",
+              "requiredField": true,
+              "placeholder": "Paste the full job description here"
+            },
+            {
+              "fieldLabel": "Resume File",
+              "fieldType": "file",
+              "requiredField": true,
+              "acceptFileTypes": ".pdf"
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "responseText": "Your tailored resume is being generated. Check your email in the next 2 to 3 minutes."
+      },
+      "id": "node-01-form",
+      "name": "On Form Submission",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2,
+      "position": [0, 320],
+      "notes": "Entry point. Three fields only: email address, job description, and resume PDF upload. Email is kept so we know where to send the output."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Extract Resume Text\n// Decodes the uploaded PDF binary and extracts readable\n// text from it using basic PDF text stream parsing.\n// Works for standard text-based PDFs.\n// -------------------------------------------------------\n\nconst item = $input.item;\n\nconst email = item.json['Email Address'];\nconst jobDescription = item.json['Job Description'];\n\nconst fileKey = Object.keys(item.binary || {})[0];\nif (!fileKey) {\n  throw new Error('No resume file found in the submission.');\n}\n\nconst fileBinary = item.binary[fileKey];\nconst buffer = Buffer.from(fileBinary.data, 'base64');\n\n// Extract text from PDF by parsing raw content streams\n// This works for standard text-based PDFs without needing external libraries\nlet pdfText = '';\nconst pdfString = buffer.toString('binary');\n\n// Extract text between BT (begin text) and ET (end text) markers\nconst textBlocks = pdfString.match(/BT[\\s\\S]*?ET/g) || [];\n\nfor (const block of textBlocks) {\n  // Extract text from Tj and TJ operators\n  const tjMatches = block.match(/\\(([^)]+)\\)\\s*Tj/g) || [];\n  const tjArrayMatches = block.match(/\\[([^\\]]+)\\]\\s*TJ/g) || [];\n  \n  for (const match of tjMatches) {\n    const text = match.replace(/\\(([^)]+)\\)\\s*Tj/, '$1');\n    pdfText += text + ' ';\n  }\n  \n  for (const match of tjArrayMatches) {\n    const strings = match.match(/\\(([^)]+)\\)/g) || [];\n    for (const s of strings) {\n      pdfText += s.replace(/[()]/g, '') + ' ';\n    }\n  }\n}\n\n// Clean up the extracted text\npdfText = pdfText\n  .replace(/\\\\n/g, '\\n')\n  .replace(/\\\\t/g, ' ')\n  .replace(/\\s+/g, ' ')\n  .trim();\n\nif (!pdfText || pdfText.length < 50) {\n  throw new Error('Could not extract readable text from the PDF. The file may be image-based or encrypted. Please upload a standard text-based PDF.');\n}\n\nreturn {\n  email,\n  jobDescription,\n  resumeText: pdfText,\n  resumeBase64: fileBinary.data\n};"
+      },
+      "id": "node-02-extract-text",
+      "name": "Extract Resume Text",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [260, 320],
+      "notes": "Decodes the uploaded PDF and extracts plain text using PDF content stream parsing. No external libraries needed. Passes extracted text, base64, email and job description downstream."
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a senior professional resume writer with 15 years of experience helping candidates land roles at top companies.\n\nHere is the job description the candidate is applying to:\n\n{{ $json.jobDescription }}\n\nHere is the candidate's current resume:\n\n{{ $json.resumeText }}\n\nRewrite this resume to be fully tailored for the role above.\n\nRules:\n1. NEVER fabricate experience, skills, or qualifications not in the original resume.\n2. Naturally incorporate keywords and phrases from the job description into the summary, experience bullet points, and skills section.\n3. Rewrite bullet points to emphasize impact and relevance. Use strong action verbs.\n4. Quantify achievements wherever the original resume gives you enough context.\n5. Keep the same overall career timeline and structure.\n6. Output clean plain text only using these exact section headers: SUMMARY, EXPERIENCE, EDUCATION, SKILLS\n7. Do not include any commentary, explanation, or preamble. Output the resume only.",
+        "options": {
+          "systemMessage": "You are a senior professional resume writer. Output only the rewritten resume text with no commentary."
+        }
+      },
+      "id": "node-03-resume-agent",
+      "name": "Resume Generator Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [560, 320],
+      "notes": "AI Agent that rewrites the resume to match the job description. Connect the Anthropic Chat Model sub-node to this agent using the model connector at the bottom of the node."
+    },
+    {
+      "parameters": {
+        "model": "claude-sonnet-4-5",
+        "options": {
+          "maxTokensToSample": 4096
+        }
+      },
+      "id": "node-03a-chat-model",
+      "name": "Claude - Resume Generator",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [560, 520],
+      "notes": "Anthropic Chat Model sub-node for the Resume Generator Agent. Connect your Anthropic API credential here."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Extract Resume Output\n// Pulls the rewritten resume text from the AI Agent\n// response and carries context fields forward.\n// -------------------------------------------------------\n\nconst agentOutput = $input.item.json.output;\n\nif (!agentOutput) {\n  throw new Error('Resume Generator Agent did not return output. Check the agent node and Anthropic credential.');\n}\n\nconst extractNode = $('Extract Resume Text').item.json;\n\nreturn {\n  email: extractNode.email,\n  jobDescription: extractNode.jobDescription,\n  rewrittenResume: agentOutput\n};"
+      },
+      "id": "node-04-extract-output",
+      "name": "Extract Resume Output",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [820, 320],
+      "notes": "Parses the AI Agent response and extracts the rewritten resume text. Carries email and job description forward for downstream nodes."
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Convert the following resume text into a clean, professional LaTeX document.\n\n{{ $json.rewrittenResume }}\n\nRules:\n1. Use \\documentclass[letterpaper,11pt]{article} as the base.\n2. Include these packages: geometry (margins top=0.75in bottom=0.75in left=0.75in right=0.75in), fontenc (T1), inputenc (utf8), hyperref, enumitem, titlesec.\n3. Use \\section for each resume section with a horizontal rule underneath.\n4. Use itemize with noitemsep for bullet points under experience entries.\n5. Format experience: Company Name and date range on the same line, Job Title below, then bullets.\n6. Use default LaTeX fonts only.\n7. Output ONLY valid LaTeX. No markdown, no backticks, no explanation. Start with \\documentclass and end with \\end{document}.\n8. Must compile on Overleaf without errors.",
+        "options": {
+          "systemMessage": "You are a LaTeX expert. Output only valid compilable LaTeX code and nothing else."
+        }
+      },
+      "id": "node-05-latex-agent",
+      "name": "LaTeX Converter Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [1080, 320],
+      "notes": "AI Agent that converts the plain text resume into compilable LaTeX. Connect a second Anthropic Chat Model sub-node to this agent."
+    },
+    {
+      "parameters": {
+        "model": "claude-sonnet-4-5",
+        "options": {
+          "maxTokensToSample": 4096
+        }
+      },
+      "id": "node-05a-chat-model",
+      "name": "Claude - LaTeX Converter",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [1080, 520],
+      "notes": "Anthropic Chat Model sub-node for the LaTeX Converter Agent. Connect the same Anthropic API credential here."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Prepare Overleaf Payload\n// Extracts LaTeX from agent response, strips any markdown\n// artifacts, validates it, generates a unique project name.\n// -------------------------------------------------------\n\nconst agentOutput = $input.item.json.output;\n\nif (!agentOutput) {\n  throw new Error('LaTeX Converter Agent did not return output.');\n}\n\nlet latexCode = agentOutput;\n\n// Strip any markdown fences Claude might add\nlatexCode = latexCode.replace(/```latex/gi, '').replace(/```/g, '').trim();\n\n// Validate it is actually LaTeX\nif (!latexCode.includes('\\\\documentclass')) {\n  throw new Error('Output does not contain valid LaTeX. Check the LaTeX Converter Agent prompt.');\n}\n\nconst extractNode = $('Extract Resume Output').item.json;\nconst timestamp = Date.now();\n\nreturn {\n  latexCode,\n  email: extractNode.email,\n  projectName: `Resume_${timestamp}`\n};"
+      },
+      "id": "node-06-prepare-payload",
+      "name": "Prepare Overleaf Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 320],
+      "notes": "Cleans and validates the LaTeX output. Strips accidental markdown fences. Generates a unique project name. Bridge between AI generation and Overleaf integration."
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://www.overleaf.com/project",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Cookie",
+              "value": "={{ $env.OVERLEAF_SESSION }}"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "node-07-connect-overleaf",
+      "name": "Connect Overleaf",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1600, 320],
+      "notes": "GET request to Overleaf using session cookie. Captures full HTML response so CSRF token can be extracted. If it returns a login redirect, the session cookie has expired."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Extract CSRF Token\n// Parses Overleaf HTML to find the CSRF token.\n// Required for all POST requests to Overleaf.\n// -------------------------------------------------------\n\nconst body = $input.item.json.body;\n\nif (!body) {\n  throw new Error('No response from Overleaf. OVERLEAF_SESSION may have expired.');\n}\n\nlet csrfToken = null;\n\nconst jsonMatch = body.match(/\"csrfToken\"\\s*:\\s*\"([^\"]+)\"/);\nif (jsonMatch) csrfToken = jsonMatch[1];\n\nif (!csrfToken) {\n  const metaMatch = body.match(/<meta\\s+name=\"csrf-token\"\\s+content=\"([^\"]+)\"/);\n  if (metaMatch) csrfToken = metaMatch[1];\n}\n\nif (!csrfToken) {\n  const windowMatch = body.match(/window\\.csrfToken\\s*=\\s*['\"]([^'\"]+)['\"]/);\n  if (windowMatch) csrfToken = windowMatch[1];\n}\n\nif (!csrfToken) {\n  throw new Error('Could not extract CSRF token. Session may be invalid.');\n}\n\nconst payload = $('Prepare Overleaf Payload').item.json;\n\nreturn {\n  csrfToken,\n  latexCode: payload.latexCode,\n  email: payload.email,\n  projectName: payload.projectName\n};"
+      },
+      "id": "node-08-extract-csrf",
+      "name": "Extract CSRF Token",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1860, 320],
+      "notes": "Extracts the CSRF token from the Overleaf HTML response using three regex patterns. Required for all subsequent POST requests."
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.overleaf.com/project/new/blank",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Cookie",
+              "value": "={{ $env.OVERLEAF_SESSION }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "X-CSRF-Token",
+              "value": "={{ $json.csrfToken }}"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.overleaf.com/project"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"_csrf\": \"{{ $json.csrfToken }}\", \"projectName\": \"{{ $json.projectName }}\" }",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "node-09-create-project",
+      "name": "Create Overleaf Project",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [2120, 320],
+      "notes": "Creates a new blank Overleaf project. Returns the project ID needed for all subsequent requests."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Extract Project ID\n// Pulls the project ID from the Overleaf creation response.\n// -------------------------------------------------------\n\nconst response = $input.item.json;\nlet projectId = null;\n\nif (response.body) {\n  try {\n    const parsed = typeof response.body === 'string' ? JSON.parse(response.body) : response.body;\n    projectId = parsed.project_id || parsed._id || parsed.id;\n  } catch(e) {\n    projectId = response.body.project_id || response.body._id || response.body.id;\n  }\n}\n\nif (!projectId && response.headers && response.headers.location) {\n  const match = response.headers.location.match(/\\/project\\/([a-f0-9]+)/);\n  if (match) projectId = match[1];\n}\n\nif (!projectId) {\n  throw new Error('Could not extract project ID from Overleaf response.');\n}\n\nconst prev = $('Extract CSRF Token').item.json;\n\nreturn {\n  projectId,\n  csrfToken: prev.csrfToken,\n  latexCode: prev.latexCode,\n  email: prev.email\n};"
+      },
+      "id": "node-10-extract-project-id",
+      "name": "Extract Project ID",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2380, 320],
+      "notes": "Extracts the Overleaf project ID from the creation response. Checks both response body and Location header."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Build Paste LaTeX Body\n// Constructs the request body for pasting LaTeX into\n// the Overleaf project safely without JSON interpolation issues.\n// -------------------------------------------------------\n\nconst projectId = $input.item.json.projectId;\nconst csrfToken = $input.item.json.csrfToken;\nconst latexCode = $input.item.json.latexCode;\nconst email = $input.item.json.email;\n\nconst body = JSON.stringify({\n  _csrf: csrfToken,\n  name: 'main.tex',\n  content: latexCode\n});\n\nreturn {\n  projectId,\n  csrfToken,\n  email,\n  body\n};"
+      },
+      "id": "node-11-build-paste-body",
+      "name": "Build Paste LaTeX Body",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2640, 320],
+      "notes": "Safely constructs the JSON body for the paste LaTeX request using JSON.stringify to handle all special characters in the LaTeX code without breaking the request."
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://www.overleaf.com/project/{{ $('Extract Project ID').item.json.projectId }}/doc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Cookie",
+              "value": "={{ $env.OVERLEAF_SESSION }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "X-CSRF-Token",
+              "value": "={{ $('Extract Project ID').item.json.csrfToken }}"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.body }}",
+        "options": {}
+      },
+      "id": "node-12-paste-latex",
+      "name": "Paste LaTeX into Project",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [2900, 320],
+      "notes": "Writes the LaTeX into main.tex of the Overleaf project. Uses raw body mode with the pre-built JSON string from the previous Code node to avoid interpolation issues."
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://www.overleaf.com/project/{{ $('Extract Project ID').item.json.projectId }}/compile",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Cookie",
+              "value": "={{ $env.OVERLEAF_SESSION }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "X-CSRF-Token",
+              "value": "={{ $('Extract Project ID').item.json.csrfToken }}"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"_csrf\": \"{{ $('Extract Project ID').item.json.csrfToken }}\",\n  \"rootResourcePath\": \"main.tex\",\n  \"compiler\": \"pdflatex\",\n  \"draft\": false,\n  \"check\": \"silent\"\n}",
+        "options": {}
+      },
+      "id": "node-13-compile",
+      "name": "Compile Project",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [3160, 320],
+      "notes": "Triggers pdflatex compilation on the Overleaf project."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Check Compile Status\n// Validates compilation succeeded and gets PDF path.\n// -------------------------------------------------------\n\nconst response = $input.item.json;\n\nlet status = null;\nlet outputFiles = [];\n\ntry {\n  const body = typeof response === 'string' ? JSON.parse(response) : response;\n  status = body.status;\n  outputFiles = body.outputFiles || [];\n} catch(e) {\n  throw new Error('Could not parse compile response.');\n}\n\nif (status !== 'success') {\n  throw new Error(`Overleaf compilation failed: ${status}. Check LaTeX output.`);\n}\n\nconst pdfFile = outputFiles.find(f => f.path && f.path.endsWith('.pdf'));\nif (!pdfFile) {\n  throw new Error('No PDF found in compile output.');\n}\n\nconst projectData = $('Extract Project ID').item.json;\n\nreturn {\n  projectId: projectData.projectId,\n  pdfBuild: pdfFile.build || '',\n  email: projectData.email\n};"
+      },
+      "id": "node-14-check-status",
+      "name": "Check Compile Status",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [3420, 320],
+      "notes": "Validates compile result and extracts PDF build path for download."
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://www.overleaf.com/project/{{ $json.projectId }}/build/{{ $json.pdfBuild }}/output/output.pdf",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Cookie",
+              "value": "={{ $env.OVERLEAF_SESSION }}"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "node-15-download-pdf",
+      "name": "Download Resume PDF",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [3680, 320],
+      "notes": "Downloads the compiled PDF from Overleaf as binary. Response format is set to file."
+    },
+    {
+      "parameters": {
+        "jsCode": "// -------------------------------------------------------\n// NODE: Prepare Email\n// Renames the PDF binary and structures data for Gmail.\n// -------------------------------------------------------\n\nconst item = $input.item;\nconst email = $('Check Compile Status').item.json.email;\nconst fileName = `Tailored_Resume_${Date.now()}.pdf`;\n\nconst binaryKey = Object.keys(item.binary || {})[0];\nif (!binaryKey) {\n  throw new Error('No PDF binary found. Check Download Resume PDF node.');\n}\n\nreturn {\n  json: {\n    recipientEmail: email,\n    fileName\n  },\n  binary: {\n    resumePDF: {\n      ...item.binary[binaryKey],\n      fileName,\n      mimeType: 'application/pdf'\n    }\n  }\n};"
+      },
+      "id": "node-16-prepare-email",
+      "name": "Prepare Email",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [3940, 320],
+      "notes": "Renames the PDF and structures the binary for Gmail attachment."
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.recipientEmail }}",
+        "subject": "Your Tailored Resume is Ready",
+        "message": "Hi,\n\nYour tailored resume is attached. It has been rewritten to match the job description you submitted.\n\nA few tips:\n1. Review it to make sure everything accurately reflects your experience.\n2. Save a copy for reference during interviews.\n3. Submit again anytime you apply to a different role.\n\nGood luck!\n\nThe ORU Team\njoinoru.com",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {
+                "property": "resumePDF"
+              }
+            ]
+          }
+        }
+      },
+      "id": "node-17-send-email",
+      "name": "Send Resume by Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [4200, 320],
+      "notes": "Sends the tailored resume PDF to the candidate. Connect Gmail OAuth credential before activating."
+    }
+  ],
+  "connections": {
+    "On Form Submission": {
+      "main": [[{ "node": "Extract Resume Text", "type": "main", "index": 0 }]]
+    },
+    "Extract Resume Text": {
+      "main": [[{ "node": "Resume Generator Agent", "type": "main", "index": 0 }]]
+    },
+    "Resume Generator Agent": {
+      "main": [[{ "node": "Extract Resume Output", "type": "main", "index": 0 }]]
+    },
+    "Extract Resume Output": {
+      "main": [[{ "node": "LaTeX Converter Agent", "type": "main", "index": 0 }]]
+    },
+    "LaTeX Converter Agent": {
+      "main": [[{ "node": "Prepare Overleaf Payload", "type": "main", "index": 0 }]]
+    },
+    "Prepare Overleaf Payload": {
+      "main": [[{ "node": "Connect Overleaf", "type": "main", "index": 0 }]]
+    },
+    "Connect Overleaf": {
+      "main": [[{ "node": "Extract CSRF Token", "type": "main", "index": 0 }]]
+    },
+    "Extract CSRF Token": {
+      "main": [[{ "node": "Create Overleaf Project", "type": "main", "index": 0 }]]
+    },
+    "Create Overleaf Project": {
+      "main": [[{ "node": "Extract Project ID", "type": "main", "index": 0 }]]
+    },
+    "Extract Project ID": {
+      "main": [[{ "node": "Build Paste LaTeX Body", "type": "main", "index": 0 }]]
+    },
+    "Build Paste LaTeX Body": {
+      "main": [[{ "node": "Paste LaTeX into Project", "type": "main", "index": 0 }]]
+    },
+    "Paste LaTeX into Project": {
+      "main": [[{ "node": "Compile Project", "type": "main", "index": 0 }]]
+    },
+    "Compile Project": {
+      "main": [[{ "node": "Check Compile Status", "type": "main", "index": 0 }]]
+    },
+    "Check Compile Status": {
+      "main": [[{ "node": "Download Resume PDF", "type": "main", "index": 0 }]]
+    },
+    "Download Resume PDF": {
+      "main": [[{ "node": "Prepare Email", "type": "main", "index": 0 }]]
+    },
+    "Prepare Email": {
+      "main": [[{ "node": "Send Resume by Email", "type": "main", "index": 0 }]]
+    },
+    "Claude - Resume Generator": {
+      "ai_languageModel": [[{ "node": "Resume Generator Agent", "type": "ai_languageModel", "index": 0 }]]
+    },
+    "Claude - LaTeX Converter": {
+      "ai_languageModel": [[{ "node": "LaTeX Converter Agent", "type": "ai_languageModel", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
